@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoViva - Biblioteca</title>
+
+    <link rel="stylesheet" href="pBiblioteca.css">
+</head>
+<body>
+    <header class="header">
+        <h4>Logo</h4>
+        <nav>
+            <a href="#">Início</a>
+            <a href="#">Mapa</a>
+            <a href="#">Jogos</a>
+            <a href="#">Biblioteca</a>
+            <a href="#">Capy</a>
+        </nav>
+    </header>
+    <section class="biblioteca">
+        <div class="texto-topo">
+            <p>
+                “Quanto mais você ler, mais coisas você saberá.
+                Quanto mais você aprender, mais lugares você irá.”
+                — Dr. Seuss
+            </p>
+        </div>
+        <div class="area-filtros">
+            <div class="filtros">
+                <h4>Buscar por Tipo</h4>
+                <div class="grupo-botoes">
+                    <button onclick="filtrarTipo('Todos')">
+                        Artigos
+                    </button>
+                    <button onclick="filtrarTipo('Livro')">
+                        Livros
+                    </button>
+                    <button onclick="filtrarTipo('Noticia')">
+                        Notícias
+                    </button>
+                    <button onclick="filtrarTipo('Tutorial')">
+                        Tutoriais
+                    </button>
+                </div>
+            </div>
+            <div class="filtros">
+                <h4>Status</h4>
+                <div class="grupo-botoes">
+                    <button onclick="filtrarStatus('Todos')">
+                        Tudo
+                    </button>
+                    <button onclick="filtrarStatus('Lido')">
+                        Lido
+                    </button>
+                    <button onclick="filtrarStatus('Lendo')">
+                        Lendo
+                    </button>
+                    <button onclick="filtrarStatus('Quero ler')">
+                        Quero ler
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="busca">
+            <input
+                type="text"
+                id="busca"
+                placeholder="Buscar por título...">
+        </div>
+        <div id="cards"></div>
+    </section>
+    <footer class="footer">
+        <h2>Logo</h2>
+    </footer>
+    <script src="pBiblioteca.js"></script>
+</body>
+</html>

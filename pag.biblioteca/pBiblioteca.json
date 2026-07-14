@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "titulo": "Sustentabilidade na Escola",
+        "descricao": "Guia básico sobre sustentabilidade.",
+        "tipo": "Livro",
+        "imagem": "imagens/livro1.jpg",
+        "arquivo": "pdfs/livro1.pdf"
+    },
+    {
+        "id": 2,
+        "titulo": "Reciclagem Urbana",
+        "descricao": "Artigo sobre reciclagem.",
+        "tipo": "Artigo",
+        "imagem": "imagens/artigo1.jpg",
+        "arquivo": "pdfs/artigo1.pdf"
+    },
+    {
+        "id": 3,
+        "titulo": "Energia Solar",
+        "descricao": "Tutorial sobre energia solar.",
+        "tipo": "Tutorial",
+        "imagem": "imagens/tutorial1.jpg",
+        "arquivo": "pdfs/tutorial1.pdf"
+    }
+]
