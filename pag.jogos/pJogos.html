@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ECOPIXEL — Aprenda a salvar o planeta</title>
+  <link rel="stylesheet" href="pJogos.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323:wght@400&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="navbar">
+    <div class="nav-inner">
+      <span class="nav-logo">Logo <strong>ECOPIXEL</strong></span>
+      <ul class="nav-links">
+        <li><a href="#inicio">Início</a></li>
+        <li><a href="#mapa">Mapa</a></li>
+        <li><a href="#jogos">Jogos</a></li>
+        <li><a href="#biblioteca">Biblioteca</a></li>
+        <li><a href="#copy">Copy</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Menu">&#9776;</button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="inicio">
+    <div class="hero-inner">
+      <div class="hero-text">
+        <h1 class="hero-title">
+          Aprenda a<br/>
+          <span class="highlight">salvar</span> o<br/>
+          planeta
+        </h1>
+        <p class="hero-desc">
+          Uma biblioteca de jogos pixel art dedicada ao ensino de sustentabilidade,
+          ecologia e consciência ambiental para todas as idades.
+        </p>
+        <div class="hero-cta">
+          <a href="#biblioteca" class="btn-primary">Jogar agora</a>
+          <a href="#mapa" class="btn-outline">Ver mapa</a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="/image.png" alt="Pixel art platformer game" />
+      </div>
+    </div>
+  </section>
+
+  <!-- PIXEL DIVIDER -->
+  <div class="pixel-divider" aria-hidden="true">
+    <div class="pixel-strip"></div>
+  </div>
+
+  <!-- BIBLIOTECA -->
+  <section class="biblioteca" id="biblioteca">
+    <div class="section-inner">
+      <h2 class="section-title">Biblioteca de jogos</h2>
+
+      <div class="filters">
+        <button class="filter-btn active" data-filter="todos">Todos</button>
+        <button class="filter-btn" data-filter="jogados">Jogados</button>
+        <button class="filter-btn" data-filter="nao-jogados">Não Jogados</button>
+        <button class="filter-btn" data-filter="continuar">Continuar</button>
+      </div>
+
+      <div class="games-grid" id="games-grid">
+        <!-- cards inserted by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <span class="footer-logo">Logo</span>
+      <p class="footer-copy">&copy; 2024 ECOPIXEL. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script type="module" src="pJogos.js"></script>
+</body>
+</html>

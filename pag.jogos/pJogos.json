@@ -1,0 +1,20 @@
+[
+    {
+      "id": 1,
+      "name": "Eco Adventure",
+      "desc": "Aprenda reciclagem jogando.",
+      "level": "Nível 1",
+      "status": "nao-jogados",
+      "img": "img/jogo1.png",
+      "page":"link pagina"
+    },
+    {
+      "id": 2,
+      "name": "Floresta Viva",
+      "desc": "Proteja a natureza.",
+      "level": "Nível 2",
+      "status": "jogados",
+      "img": "img/jogo2.png",
+      "page":"link pagina"
+    }
+  ]
