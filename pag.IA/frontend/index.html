@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Capy - EcoViva</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+</head>
+<body>
+    <header>
+        <div class="logo">Logo</div>
+        <nav>
+            <a href="#">Início</a>
+            <a href="#">Mapa</a>
+            <a href="#">Jogos</a>
+            <a href="#">Biblioteca</a>
+            <a href="#">Capy</a>
+        </nav>
+    </header>
+
+    <main>
+        <aside>
+            <div class="capyImg">
+                <img src="img/capy.png" alt="Capivara" />
+            </div>
+            <p>
+                Olá meu amiguinho!<br />
+                Eu me chamo Capy,<br />
+                sou a capivara delegada pelo EcoViva para te ajudar a responder algumas das suas perguntas.
+                <br /><br />
+                Conte comigo para aprender um pouco mais sobre a nossa Terra!!
+            </p>
+        </aside>
+
+        <section>
+            <h1>
+                "A <span>sustentabilidade</span> é uma jornada de descobertas contínuas.
+                Aprender a viver em <span>harmonia</span> com o planeta não é apenas uma necessidade,
+                é a maior <span>evolução</span> da nossa consciência."
+            </h1>
+
+            <div class="chat">
+                <textarea id="pergunta" placeholder="Tire suas dúvidas aqui"></textarea>
+                <button id="enviar">
+                    <i class="fa-solid fa-play"></i>
+                </button>
+            </div>
+
+            <div class="typing" id="resposta">
+                ...
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
