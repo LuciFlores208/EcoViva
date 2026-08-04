@@ -1,0 +1,202 @@
+[
+    {
+        "id": 1,
+        "titulo": "Modelo de Mensuração da Sustentabilidade em Agronegócios",
+        "descricao": "Apresenta métodos para avaliar indicadores de sustentabilidade em organizações do setor do agronegócio.",
+        "tipo": "Artigo",
+        "imagem": "",
+        "arquivo": "pdfs/000760299 (1).pdf"
+    },
+    {
+        "id": 2,
+        "titulo": "Sustentabilidade e o Mercado Financeiro",
+        "descricao": "Analisa a relação entre sustentabilidade corporativa e o desempenho das instituições financeiras.",
+        "tipo": "Artigo",
+        "imagem": "",
+        "arquivo": "pdfs/1-s2.0-S1809227616305975-main.pdf"
+    },
+    {
+        "id": 3,
+        "titulo": "Sustentabilidade no Planejamento Turístico",
+        "descricao": "Discute o significado da sustentabilidade aplicada ao planejamento e desenvolvimento do turismo.",
+        "tipo": "Artigo",
+        "imagem": "",
+        "arquivo": "pdfs/115416146001.pdf"
+    },
+    {
+        "id": 4,
+        "titulo": "Entendendo o Conceito de Sustentabilidade nas Organizações",
+        "descricao": "Explora como empresas interpretam e aplicam práticas sustentáveis em sua gestão.",
+        "tipo": "Artigo",
+        "imagem": "",
+        "arquivo": "pdfs/223417504001 (2).pdf"
+    },
+    {
+        "id": 5,
+        "titulo": "Reflexões sobre Sustentabilidade",
+        "descricao": "Apresenta uma breve discussão sobre conceitos relacionados ao desenvolvimento sustentável.",
+        "tipo": "Artigo",
+        "imagem": "",
+        "arquivo": "pdfs/239-128-PB (1).pdf"
+    },
+    {
+        "id": 6,
+        "titulo": "Educação Ambiental e Sustentabilidade",
+        "descricao": "Aborda o papel da educação ambiental na formação de cidadãos conscientes e comprometidos com a sustentabilidade.",
+        "tipo": "Artigo",
+        "imagem": "",
+        "arquivo": "pdfs/2670-Texto do artigo-13165-1-10-20190207 (1).pdf"
+    },
+    {
+        "id": 7,
+        "titulo": "A Controvérsia na Educação para a Sustentabilidade",
+        "descricao": "Reflete sobre os desafios da educação para a sustentabilidade nas escolas do século XXI.",
+        "tipo": "Artigo",
+        "imagem": "",
+        "arquivo": "pdfs/318-Texto do Trabalho-733-1-10-20120405 (1).pdf"
+    },
+    {
+        "id": 8,
+        "titulo": "A Importância da Educação Ambiental para a Sustentabilidade",
+        "descricao": "Destaca como a educação ambiental contribui para práticas sustentáveis e preservação do meio ambiente.",
+        "tipo": "Artigo",
+        "imagem": "",
+        "arquivo": "pdfs/A IMPORTÂNCIA DA EDUCAÇÃO AMBIENTAL PARA A SUSTENTABILIDADE.pdf"
+    },
+    {
+        "id": 9,
+        "titulo": "A Moda no Contexto da Sustentabilidade",
+        "descricao": "Analisa os desafios e oportunidades da moda sustentável e do consumo consciente.",
+        "tipo": "Artigo",
+        "imagem": "",
+        "arquivo": "pdfs/A moda no contexto da sustentabilidade.pdf"
+    },
+    {
+        "id": 10,
+        "titulo": "Centros Históricos e Sustentabilidade Cultural",
+        "descricao": "Discute a preservação dos centros históricos como elemento essencial para a sustentabilidade urbana.",
+        "tipo": "Artigo",
+        "imagem": "",
+        "arquivo": "pdfs/Centros históricos e sustentabilidade.pdf"
+    },
+    {
+        "id": 11,
+        "titulo": "Desenvolvimento e Natureza",
+        "descricao": "Reúne estudos que analisam a relação entre desenvolvimento econômico e preservação ambiental.",
+        "tipo": "Artigo",
+        "imagem": "",
+        "arquivo": "pdfs/Desenvolvimento_e_natureza_estudos_para.pdf"
+    },
+    {
+        "id": 12,
+        "titulo": "Educação Ambiental para Redução da Produção de Resíduos",
+        "descricao": "Apresenta estratégias educativas voltadas para redução do desperdício e promoção da sustentabilidade.",
+        "tipo": "Artigo",
+        "imagem": "",
+        "arquivo": "pdfs/Educacao_Ambiental_para_reducao_da_produ.pdf"
+    },
+    {
+        "id": 13,
+        "titulo": "Construir a Sustentabilidade a Partir da Infância",
+        "descricao": "Mostra a importância de desenvolver valores sustentáveis desde a educação infantil.",
+        "tipo": "Artigo",
+        "imagem": "",
+        "arquivo": "pdfs/Folque Aresta & Melo (2017) Construir a susten tabilidade a partir da infância.pdf"
+    },
+    {
+        "id": 14,
+        "titulo": "Inovação Social e Sustentabilidade",
+        "descricao": "Explora como iniciativas de inovação social contribuem para o desenvolvimento sustentável.",
+        "tipo": "Artigo",
+        "imagem": "",
+        "arquivo": "pdfs/INOVAÇÃO_SOCIAL_E_SUSTENTABILIDADE.pdf"
+    },
+    {
+        "id": 15,
+        "titulo": "Sustentabilidade na Construção Civil",
+        "descricao": "Analisa práticas sustentáveis aplicadas ao setor da construção civil.",
+        "tipo": "Artigo",
+        "imagem": "",
+        "arquivo": "pdfs/MONOGRAFIA_SUSTENTABILIDADE_NA_CONSTRUCA (1).pdf"
+    },
+    {
+        "id": 16,
+        "titulo": "Pegada Hídrica como Medida de Sustentabilidade",
+        "descricao": "Apresenta a pegada hídrica como indicador para avaliação do uso sustentável da água.",
+        "tipo": "Artigo",
+        "imagem": "",
+        "arquivo": "pdfs/Medida_de_sustentabilidade_PegadaHidrica.pdf"
+    },
+    {
+        "id": 17,
+        "titulo": "Sustentabilidade Ambiental",
+        "descricao": "Realiza uma análise da produção científica brasileira sobre sustentabilidade ambiental.",
+        "tipo": "Artigo",
+        "imagem": "",
+        "arquivo": "pdfs/Sustentabilidade Ambiental.pdf"
+    },
+    {
+        "id": 18,
+        "titulo": "Sustentabilidade: Mantra ou Escolha Moral?",
+        "descricao": "Propõe uma reflexão crítica sobre os fundamentos éticos da sustentabilidade.",
+        "tipo": "Artigo",
+        "imagem": "",
+        "arquivo": "pdfs/Sustentabilidade Mantra ou Moral.pdf"
+    },
+    {
+        "id": 19,
+        "titulo": "Sustentabilidade Corporativa no Setor Financeiro Brasileiro",
+        "descricao": "Examina práticas de sustentabilidade adotadas por instituições financeiras brasileiras.",
+        "tipo": "Artigo",
+        "imagem": "",
+        "arquivo": "pdfs/Sustentabilidade corporativa no setor financeiro brasileiro_Estudos Especiais.pdf"
+    },
+    {
+        "id": 20,
+        "titulo": "Sustentabilidade Ambiental",
+        "descricao": "E-book que reúne conceitos, desafios e práticas voltadas para a preservação ambiental.",
+        "tipo": "Artigo",
+        "imagem": "",
+        "arquivo": "pdfs/Sustentabilidade_ambiental_ebook (1).pdf"
+    },
+    {
+        "id": 21,
+        "titulo": "Sustentabilidade em Transportes",
+        "descricao": "Discute políticas públicas e mobilidade urbana sob a perspectiva da sustentabilidade.",
+        "tipo": "Artigo",
+        "imagem": "",
+        "arquivo": "pdfs/Sustentabilidade_em_transportes_do_conce.pdf"
+    },
+    {
+        "id": 22,
+        "titulo": "A Sustentabilidade e suas Dimensões",
+        "descricao": "Apresenta as dimensões ambiental, social, econômica e institucional da sustentabilidade.",
+        "tipo": "Artigo",
+        "imagem": "",
+        "arquivo": "pdfs/biblioteca,+at_7 (1).pdf"
+    },
+    {
+        "id": 23,
+        "titulo": "Qualidade de Vida e Sustentabilidade Urbana",
+        "descricao": "Analisa indicadores de qualidade de vida relacionados ao desenvolvimento urbano sustentável.",
+        "tipo": "Artigo",
+        "imagem": "",
+        "arquivo": "pdfs/cousteau,+18071600_Vol_1_2014_003_019.pdf"
+    },
+    {
+        "id": 24,
+        "titulo": "Energia e Desenvolvimento Sustentável",
+        "descricao": "Discute os impactos da energia e do desenvolvimento econômico na sustentabilidade.",
+        "tipo": "Artigo",
+        "imagem": "",
+        "arquivo": "pdfs/download (1).pdf"
+    },
+    {
+        "id": 25,
+        "titulo": "Os Limiares Ecológicos Globais",
+        "descricao": "Analisa os desafios ambientais globais relacionados ao clima, biodiversidade e oceanos.",
+        "tipo": "Artigo",
+        "imagem": "",
+        "arquivo": "pdfs/www.scielo.br (1).pdf"
+    }
+]
