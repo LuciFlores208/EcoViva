@@ -82,10 +82,10 @@ function renderizarCards() {
 
             <div class="card">
 
-                <img
-                    src="${item.imagem}"
-                    alt="${item.titulo}"
-                >
+            ${item.imagem
+                ? `<img src="${item.imagem}" alt="${item.titulo}">`
+                : `<div class="sem-imagem">📄</div>`
+            }
 
                 <div class="card-conteudo">
 

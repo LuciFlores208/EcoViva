@@ -138,9 +138,9 @@ body{
     color:inherit;
 }
 
-.card{
+.card{ 
     width:220px;
-    height:420px; 
+    min-height:520px;
     background:#d9d9d9;
     border-radius:10px;
     overflow:hidden;
@@ -157,6 +157,7 @@ body{
     height:120px;
     object-fit:cover;
     background:#4f8b43;
+    display: block;
 }
 
 .card-conteudo{
@@ -167,10 +168,14 @@ body{
 }
 
 .card h3{
-    text-align:center;
-    color:#000;
-    margin-bottom:15px;
-    font-size:22px;
+        text-align:center;
+        color:#000;
+        margin-bottom:15px;
+        font-size:22px;
+        height:110px;
+        display:flex;
+        align-items:center;
+        justify-content:center;
 }
 
 .card p{
@@ -178,6 +183,21 @@ body{
     color:#000;
     font-size:14px;
     margin-bottom:15px;
+    height:95px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.sem-imagem{
+    width:100%;
+    height:180px;
+    background:#4f8b43;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:70px;
+    color:white;
 }
 
 .tipo{
