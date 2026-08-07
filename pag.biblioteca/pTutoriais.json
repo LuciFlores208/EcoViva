@@ -1,0 +1,10 @@
+[
+    {
+        "id": 1,
+        "titulo": "G1 Meio Ambiente",
+        "tipo": "Noticia",
+        "imagem": "prints/G1.png",
+        "link": "https://g1.globo.com/meio-ambiente/"
+    }
+
+]

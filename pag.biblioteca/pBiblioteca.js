@@ -4,16 +4,22 @@ let tipoSelecionado = "Todos";
 let statusSelecionado = "Todos";
 
 // Carrega o JSON
-fetch("pBiblioteca.json")
-    .then(response => response.json())
-    .then(dados => {
-        console.log("Biblioteca carregada:", dados);
-        console.log("Quantidade:", dados.length);
+Promise.all([
+    fetch("pBiblioteca.json").then(r => r.json()),
+    fetch("pNoticias.json").then(r => r.json()),
+    fetch("pTutoriais.json").then(r => r.json())
+])
+.then(([bibliotecaDados, noticiasDados]) => {
 
-        biblioteca = dados;
-        renderizarCards();
-    })
-    .catch(erro => console.error("Erro ao carregar JSON:", erro));
+    biblioteca = [
+        ...bibliotecaDados,
+        ...noticiasDados
+    ];
+
+    renderizarCards();
+
+})
+.catch(erro => console.log(erro));
 // Busca em tempo real
 document.addEventListener("DOMContentLoaded", () => {
 
@@ -54,9 +60,10 @@ function renderizarCards() {
         const buscaValida =
             item.titulo.toLowerCase().includes(textoBusca);
 
-        const tipoValido =
-            tipoSelecionado === "Todos" ||
-            item.tipo === tipoSelecionado;
+            const tipoValido =
+            tipoSelecionado === "Todos"
+                ? item.tipo !== "Noticia"
+                : item.tipo === tipoSelecionado;
 
         const statusValido =
             statusSelecionado === "Todos" ||
@@ -76,16 +83,54 @@ function renderizarCards() {
         return;
     }
 
-     resultados.forEach(item => {
+  resultados.forEach(item => {
+
+    if (item.tipo === "Noticia") {
+
+        container.innerHTML += `
+            <a
+                class="card-noticia"
+                href="${item.link}"
+                target="_blank"
+            >
+
+                <img src="${item.imagem}" alt="${item.titulo}">
+
+                <h3>${item.titulo}</h3>
+
+                <p>Clique para acessar o portal</p>
+
+            </a>
+        `;
+
+    } else if (item.tipo === "Tutorial") {
+
+        container.innerHTML += `
+            <a
+                class="card-tutorial"
+                href="${item.link}"
+                target="_blank"
+            >
+
+                <img src="${item.imagem}" alt="${item.titulo}">
+
+                <h3>${item.titulo}</h3>
+
+                <p>Clique para acessar o tutorial</p>
+
+            </a>
+        `;
+
+    } else {
 
         container.innerHTML += `
 
             <div class="card">
 
-            ${item.imagem
-                ? `<img src="${item.imagem}" alt="${item.titulo}">`
-                : `<div class="sem-imagem">📄</div>`
-            }
+                ${item.imagem
+                    ? `<img src="${item.imagem}" alt="${item.titulo}">`
+                    : `<div class="sem-imagem">📄</div>`
+                }
 
                 <div class="card-conteudo">
 
@@ -141,7 +186,10 @@ function renderizarCards() {
             </div>
 
         `;
-    });
+    }
+
+});
+
 }
 
 function alterarStatus(idLivro, select) {
