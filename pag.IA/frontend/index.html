@@ -1,16 +1,37 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Capy - EcoViva</title>
-    <link rel="stylesheet" href="style.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Fonte Inter -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    >
 </head>
+
 <body>
+
+    <!-- ================= HEADER ================= -->
+
     <header>
-        <div class="logo">Logo</div>
+
+        <div class="logo">
+            Logo
+        </div>
+
         <nav>
             <a href="#">Início</a>
             <a href="#">Mapa</a>
@@ -18,42 +39,101 @@
             <a href="#">Biblioteca</a>
             <a href="#">Capy</a>
         </nav>
+
     </header>
 
+
+    <!-- ================= CONTEÚDO PRINCIPAL ================= -->
+
     <main>
+
+        <!-- ================= SIDEBAR ================= -->
+
         <aside>
+
             <div class="capyImg">
-                <img src="img/capy.png" alt="Capivara" />
+                <img
+                    src="img/capy.png"
+                    alt="Capivara Capy"
+                >
             </div>
+
             <p>
-                Olá meu amiguinho!<br />
-                Eu me chamo Capy,<br />
+                Olá meu amiguinho!<br>
+
+                Eu me chamo Capy,<br>
+
                 sou a capivara delegada pelo EcoViva para te ajudar a responder algumas das suas perguntas.
-                <br /><br />
+
+                <br><br>
+
                 Conte comigo para aprender um pouco mais sobre a nossa Terra!!
             </p>
+
         </aside>
 
+
+        <!-- ================= ÁREA DA CAPY ================= -->
+
         <section>
+
             <h1>
-                "A <span>sustentabilidade</span> é uma jornada de descobertas contínuas.
-                Aprender a viver em <span>harmonia</span> com o planeta não é apenas uma necessidade,
-                é a maior <span>evolução</span> da nossa consciência."
+                "A
+                <span>sustentabilidade</span>
+                é uma jornada de descobertas contínuas.
+
+                Aprender a viver em
+                <span>harmonia</span>
+                com o planeta não é apenas uma necessidade,
+
+                é a maior
+                <span>evolução</span>
+                da nossa consciência."
             </h1>
 
+
+            <!-- ================= CHAT ================= -->
+
             <div class="chat">
-                <textarea id="pergunta" placeholder="Tire suas dúvidas aqui"></textarea>
-                <button id="enviar">
+
+                <textarea
+                    id="pergunta"
+                    placeholder="Tire suas dúvidas aqui"
+                    aria-label="Digite sua pergunta para a Capy"
+                ></textarea>
+
+                <button
+                    id="enviar"
+                    type="button"
+                    aria-label="Enviar pergunta"
+                >
                     <i class="fa-solid fa-play"></i>
                 </button>
+
             </div>
 
-            <div class="typing" id="resposta">
-                ...
+
+            <!-- ================= RESPOSTA ================= -->
+
+            <div
+                class="typing"
+                id="resposta"
+                aria-live="polite"
+            >
+                <span class="placeholder-resposta">
+                    A Capy está esperando sua pergunta... 🦫
+                </span>
             </div>
+
         </section>
+
     </main>
 
+
+    <!-- ================= JAVASCRIPT ================= -->
+
     <script src="script.js"></script>
+
 </body>
+
 </html>
