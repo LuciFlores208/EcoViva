@@ -9,11 +9,12 @@ Promise.all([
     fetch("pNoticias.json").then(r => r.json()),
     fetch("pTutoriais.json").then(r => r.json())
 ])
-.then(([bibliotecaDados, noticiasDados]) => {
+.then(([bibliotecaDados, noticiasDados, tutoriaisDados]) => {
 
     biblioteca = [
         ...bibliotecaDados,
-        ...noticiasDados
+        ...noticiasDados,
+        ...tutoriaisDados
     ];
 
     renderizarCards();
@@ -47,6 +48,13 @@ function filtrarStatus(status) {
 function renderizarCards() {
 
     const container = document.getElementById("cards");
+
+    // Altera o layout conforme o tipo selecionado
+    if (tipoSelecionado === "Tutorial") {
+        container.classList.add("tutoriais");
+    } else {
+        container.classList.remove("tutoriais");
+    }
 
     const textoBusca = document
         .getElementById("busca")
@@ -106,20 +114,55 @@ function renderizarCards() {
     } else if (item.tipo === "Tutorial") {
 
         container.innerHTML += `
+        <div class="card-tutorial">
+
             <a
-                class="card-tutorial"
+                class="tutorial-link"
                 href="${item.link}"
                 target="_blank"
             >
 
-                <img src="${item.imagem}" alt="${item.titulo}">
+                <div class="video-circle">
+                    <span>▶</span>
+                </div>
 
                 <h3>${item.titulo}</h3>
 
-                <p>Clique para acessar o tutorial</p>
-
             </a>
-        `;
+
+            <div class="status-card">
+
+                <label>Status:</label>
+
+                <select onchange="alterarStatus(${item.id}, this)">
+
+                    <option value=""
+                        ${!item.status ? "selected" : ""}
+                        disabled>
+                        Selecione...
+                    </option>
+
+                    <option value="Quero ler"
+                        ${item.status === "Quero ler" ? "selected" : ""}>
+                        Quero ler
+                    </option>
+
+                    <option value="Lendo"
+                        ${item.status === "Lendo" ? "selected" : ""}>
+                        Lendo
+                    </option>
+
+                    <option value="Lido"
+                        ${item.status === "Lido" ? "selected" : ""}>
+                        Lido
+                    </option>
+
+                </select>
+
+            </div>
+
+        </div>
+    `;
 
     } else {
 
