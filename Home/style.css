@@ -1,0 +1,296 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#f8f8f3;
+}
+
+nav{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:10;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:20px 8%;
+}
+
+.logo{
+    color:#fff;
+    font-size:2rem;
+    font-weight:bold;
+}
+
+nav ul{
+    display:flex;
+    gap:30px;
+    list-style:none;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+nav a:hover{
+    color:#9be28f;
+}
+
+.home-hero{
+    position:relative;
+    height:70vh;
+}
+
+.home-hero img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    filter:brightness(.55);
+}
+
+.hero-text{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    color:white;
+    text-align:center;
+}
+
+.hero-text h1{
+    font-size:70px;
+    margin-bottom:15px;
+}
+
+.hero-text p{
+    font-size:24px;
+}
+
+.principal{
+    width:100%;
+    background:white;
+}
+
+
+.sobre{
+    max-width:1200px;
+    margin:auto;
+    padding:80px 40px;
+    display:flex;
+    gap:60px;
+    align-items:flex-start;
+}
+
+.titulo-verde {
+    width: 260px;
+    height: 40px;
+    background: #476b3a;
+    border-radius: 40px;
+    margin-bottom: 30px;
+    
+}
+
+.cards {
+    flex: 1;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: start;
+}
+.proposito {
+    margin-bottom: 50px;
+}
+.cards article {
+    position: relative;
+}
+.cards article h2 {
+    font-size: 34px;
+    margin-bottom: 20px;
+}
+.cards article p{
+    line-height:1.8;
+    text-align:justify;
+}
+
+.galeria{
+    max-width:1000px;
+    margin:30px auto 80px;
+
+    display:flex;
+    justify-content:center;
+    gap:40px;
+}
+
+.galeria img{
+    width:140px;
+    height:140px;
+    object-fit:cover;
+    border-radius:50%;
+    border:6px solid #476b3a;
+}
+
+.sustentabilidade{
+    max-width:1200px;
+    margin:auto;
+    padding:50px 40px;
+}
+
+.sustentabilidade h2{
+    text-align:center;
+    font-size:36px;
+    margin-bottom:50px;
+}
+
+.texto{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:70px;
+}
+
+.texto p{
+    text-align:justify;
+    line-height:1.9;
+}
+
+.desafios{
+    max-width:1100px;
+    margin:70px auto;
+    padding:0 40px;
+}
+
+.desafios h2{
+    text-align:center;
+    font-size:36px;
+    margin-bottom:30px;
+}
+
+.desafios p{
+    line-height:1.9;
+    text-align:justify;
+}
+
+footer{
+    margin-top:80px;
+    background:#476b3a;
+    color:white;
+
+    display:flex;
+    justify-content:space-around;
+    align-items:flex-start;
+    flex-wrap:wrap;
+
+    padding:50px;
+}
+
+.footer-logo{
+    font-size:32px;
+    font-weight:bold;
+}
+
+footer h3{
+    margin-bottom:20px;
+}
+
+footer p{
+    margin:8px 0;
+}
+
+footer input{
+    width:220px;
+    padding:12px;
+    border:none;
+    border-radius:25px;
+    margin-bottom:10px;
+}
+
+footer button{
+    padding:12px 25px;
+    border:none;
+    border-radius:25px;
+    background:white;
+    color:#476b3a;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+footer button:hover{
+    background:#ececec;
+}
+
+@media(max-width:900px){
+
+    nav{
+        flex-direction:column;
+        gap:20px;
+    }
+
+    .sobre{
+        flex-direction:column;
+    }
+
+    .cards{
+        grid-template-columns:1fr;
+    }
+
+    .texto{
+        grid-template-columns:1fr;
+    }
+
+    .galeria{
+        flex-wrap:wrap;
+    }
+
+    footer{
+        gap:40px;
+        text-align:center;
+    }
+}
+
+.contato {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contato h3 {
+    margin-bottom: 10px;
+}
+
+.email-box,
+.site-box {
+    width: 230px;
+    background: white;
+    color: #333;
+    padding: 8px;
+    border-radius: 20px;
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+#botao {
+    width: 165px;
+    padding: 7px;
+    border: none;
+    border-radius: 20px;
+    background: #5d8955;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#botao:hover {
+    background: #476b3a;
+}
+.destaque {
+color:#476b3a;
+}
