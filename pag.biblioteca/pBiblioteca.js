@@ -91,147 +91,148 @@ function renderizarCards() {
         return;
     }
 
-  resultados.forEach(item => {
+    resultados.forEach(item => {
 
-    if (item.tipo === "Noticia") {
-
-        container.innerHTML += `
-            <a
-                class="card-noticia"
-                href="${item.link}"
-                target="_blank"
-            >
-
-                <img src="${item.imagem}" alt="${item.titulo}">
-
-                <h3>${item.titulo}</h3>
-
-                <p>Clique para acessar o portal</p>
-
-            </a>
-        `;
-
-    } else if (item.tipo === "Tutorial") {
-
-        container.innerHTML += `
-        <div class="card-tutorial">
-
-            <a
-                class="tutorial-link"
-                href="${item.link}"
-                target="_blank"
-            >
-
-                <div class="video-circle">
-                    <span>▶</span>
-                </div>
-
-                <h3>${item.titulo}</h3>
-
-            </a>
-
-            <div class="status-card">
-
-                <label>Status:</label>
-
-                <select onchange="alterarStatus(${item.id}, this)">
-
-                    <option value=""
-                        ${!item.status ? "selected" : ""}
-                        disabled>
-                        Selecione...
-                    </option>
-
-                    <option value="Quero ler"
-                        ${item.status === "Quero ler" ? "selected" : ""}>
-                        Quero ler
-                    </option>
-
-                    <option value="Lendo"
-                        ${item.status === "Lendo" ? "selected" : ""}>
-                        Lendo
-                    </option>
-
-                    <option value="Lido"
-                        ${item.status === "Lido" ? "selected" : ""}>
-                        Lido
-                    </option>
-
-                </select>
-
-            </div>
-
-        </div>
-    `;
-
-    } else {
-
-        container.innerHTML += `
-
-            <div class="card">
-
-                ${item.imagem
-                    ? `<img src="${item.imagem}" alt="${item.titulo}">`
-                    : `<div class="sem-imagem">📄</div>`
-                }
-
-                <div class="card-conteudo">
-
+        if (item.tipo === "Noticia") {
+    
+            container.innerHTML += `
+                <a
+                    class="card-noticia"
+                    href="${item.link}"
+                    target="_blank"
+                >
+    
+                    <img src="${item.imagem}" alt="${item.titulo}">
+    
                     <h3>${item.titulo}</h3>
-
-                    <p>${item.descricao}</p>
-
-                    <div class="tipo">
-                        ${item.tipo}
+    
+                    <p>Clique para acessar o portal</p>
+    
+                </a>
+            `;
+    
+        } else if (item.tipo === "Tutorial") {
+    
+            container.innerHTML += `
+            <div class="card-tutorial">
+    
+                <a
+                    class="tutorial-link"
+                    href="${item.link}"
+                    target="_blank"
+                >
+    
+                    <div class="video-circle">
+                        <span>▶</span>
                     </div>
-
-                    <div class="status-card">
-
-                        <label>Status:</label>
-
-                        <select onchange="alterarStatus(${item.id}, this)">
-
-                            <option value=""
-                                ${!item.status ? "selected" : ""}
-                                disabled>
-                                Selecione...
-                            </option>
-
-                            <option value="Quero ler"
-                                ${item.status === "Quero ler" ? "selected" : ""}>
-                                Quero ler
-                            </option>
-
-                            <option value="Lendo"
-                                ${item.status === "Lendo" ? "selected" : ""}>
-                                Lendo
-                            </option>
-
-                            <option value="Lido"
-                                ${item.status === "Lido" ? "selected" : ""}>
-                                Lido
-                            </option>
-
-                        </select>
-
-                    </div>
-
-                    <button
-                        class="btn-abrir"
-                        onclick="window.open('${item.arquivo}','_blank')">
-
-                        Abrir arquivo
-
-                    </button>
-
+    
+                    <h3>${item.titulo}</h3>
+    
+                </a>
+    
+                <div class="status-card">
+    
+                    <label>Status:</label>
+    
+                    <select onchange="alterarStatus(${item.id}, this)">
+    
+                        <option value=""
+                            ${!item.status ? "selected" : ""}
+                            disabled>
+                            Selecione...
+                        </option>
+    
+                        <option value="Quero ler"
+                            ${item.status === "Quero ler" ? "selected" : ""}>
+                            Quero ler
+                        </option>
+    
+                        <option value="Lendo"
+                            ${item.status === "Lendo" ? "selected" : ""}>
+                            Lendo
+                        </option>
+    
+                        <option value="Lido"
+                            ${item.status === "Lido" ? "selected" : ""}>
+                            Lido
+                        </option>
+    
+                    </select>
+    
                 </div>
-
+    
             </div>
-
         `;
-    }
-
-});
+    
+        } else {
+    
+            // ARTIGOS E LIVROS
+            container.innerHTML += `
+    
+                <div class="card">
+    
+                    ${item.imagem
+                        ? `<img src="${item.imagem}" alt="${item.titulo}">`
+                        : `<div class="sem-imagem">📄</div>`
+                    }
+    
+                    <div class="card-conteudo">
+    
+                        <h3>${item.titulo}</h3>
+    
+                        <p>${item.descricao}</p>
+    
+                        <div class="tipo">
+                            ${item.tipo}
+                        </div>
+    
+                        <div class="status-card">
+    
+                            <label>Status:</label>
+    
+                            <select onchange="alterarStatus(${item.id}, this)">
+    
+                                <option value=""
+                                    ${!item.status ? "selected" : ""}
+                                    disabled>
+                                    Selecione...
+                                </option>
+    
+                                <option value="Quero ler"
+                                    ${item.status === "Quero ler" ? "selected" : ""}>
+                                    Quero ler
+                                </option>
+    
+                                <option value="Lendo"
+                                    ${item.status === "Lendo" ? "selected" : ""}>
+                                    Lendo
+                                </option>
+    
+                                <option value="Lido"
+                                    ${item.status === "Lido" ? "selected" : ""}>
+                                    Lido
+                                </option>
+    
+                            </select>
+    
+                        </div>
+    
+                        <button
+                            class="btn-abrir"
+                            onclick="window.open('${item.arquivo}','_blank')">
+    
+                            Abrir arquivo
+    
+                        </button>
+    
+                    </div>
+    
+                </div>
+    
+            `;
+        }
+    
+    });
 
 }
 

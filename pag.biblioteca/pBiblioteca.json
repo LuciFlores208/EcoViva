@@ -198,5 +198,205 @@
         "tipo": "Artigo",
         "imagem": "prints/www.scielo.br (1).png",
         "arquivo": "pdfs/www.scielo.br (1).pdf"
+    },
+    {
+        "id": 26,
+        "titulo": "A Caminho do Crescimento Verde",
+        "descricao": "Um sumário para decisores políticos da OCDE sobre a Estratégia de Crescimento Verde. Aborda os conceitos de crescimento verde, fontes de crescimento, exemplos de iniciativas verdes pelo mundo, o impacto no emprego e a necessidade de cooperação internacional para uma transição bem-sucedida.",
+        "tipo": "Livro",
+        "imagem": "prints/A Caminho do Crescimento Verde.png",
+        "arquivo": "pdfs/pdfsLIVROS/a-caminho-do-crescimento-verde-organisation-for-economic-co-operation-and-development.pdf"
+    },
+    {
+        "id": 27,
+        "titulo": "Água e o Desenvolvimento Sustentável",
+        "descricao": "Este trabalho reflete sobre a importância da água doce para o desenvolvimento sustentável. Analisa a exploração dos recursos hídricos desde a Revolução Industrial, a crise ambiental, e a necessidade de políticas públicas, gestão eficiente e conscientização social para garantir a preservação da água para as futuras gerações.",
+        "tipo": "Livro",
+        "imagem": "prints/agua e o desenvolvimento sustentavel.png",
+        "arquivo": "pdfs/pdfsLIVROS/agua-e-o-desenvolvimento-sustentavel-wander-lucio-braga-e-sousa-e-milton-neemias.pdf"
+    },
+    {
+        "id": 28,
+        "titulo": "As Perguntas Mais Frequentes sobre os Objetivos de Desenvolvimento Sustentável (ODS)",
+        "descricao": "Um guia de perguntas e respostas sobre os ODS da Agenda 2030 da ONU. Explica o que são os ODS, sua origem, como se diferenciam dos Objetivos de Desenvolvimento do Milênio (ODM), sua implementação, monitoramento e a importância da participação da sociedade civil.",
+        "tipo": "Livro",
+        "imagem": "prints/as perguntas mais frequentes sobre os objetivos de desenvolvimento sustentavel.png",
+        "arquivo": "pdfs/pdfsLIVROS/as-perguntas-mais-frequentes-sobre-os-objetivos-de-desenvolvimento-sustentavel-ods-faculdades-integradas-de-taquara.pdf"
+    },
+    {
+        "id": 29,
+        "titulo": "Rumo a uma Economia Verde",
+        "descricao": "Uma síntese para tomadores de decisão do relatório do PNUMA sobre a Economia Verde. Argumenta que o 'esverdeamento' da economia é um motor de crescimento, geração de empregos e erradicação da pobreza, e não um obstáculo. O relatório propõe um investimento de 2% do PIB global para uma transição sustentável.",
+        "tipo": "Livro",
+        "imagem": "prints/Caminhos para o desenvolvimento sustentavel e a erradicacao da pobreza.png",
+        "arquivo": "pdfs/pdfsLIVROS/caminhos-para-o-desenvolvimento-sustentavel-e-a-erradicacao-da-pobreza-universidade-de-sao-paulo.pdf"
+    },
+    {
+        "id": 30,
+        "titulo": "Desenvolvimento Sustentável: A Evolução Teórica, o Abismo com a Prática e o Princípio de Responsabilidade",
+        "descricao": "Analisa a evolução do discurso do desenvolvimento sustentável, desde seu nascimento na Conferência de Estocolmo em 1972. Discute o grande abismo entre a teoria avançada e a prática insuficiente, e argumenta que o conceito deve ser visto como um princípio de responsabilidade ética e política, fundamental para sua efetivação.",
+        "tipo": "Livro",
+        "imagem": "prints/desenvolvimento sustentavel a evolucao teorica.png",
+        "arquivo": "pdfs/pdfsLIVROS/desenvolvimento-sustentavel-a-evolucao-teorica-o-abismo-com-a-pratica-e-o-principio-de-responsabilidade-isabella-pearce-de-carvalho-monteiro.pdf"
+    },
+    {
+        "id": 31,
+        "titulo": "Desenvolvimento Sustentável: Conceitos",
+        "descricao": "Um texto de apoio que serve como introdução ao conceito de desenvolvimento sustentável. Apresenta uma perspectiva histórica, discute o conceito do Relatório Brundtland, as diferentes visões econômicas (sustentabilidade fraca vs. forte) e a importância do planejamento e das políticas públicas para sua implementação.",
+        "tipo": "Livro",
+        "imagem": "prints/desenvolvimento sustentavel conceitos.png",
+        "arquivo": "pdfs/pdfsLIVROS/desenvolvimento-sustentavel-conceitos-joao-miguel-simao.pdf"
+    },
+    {
+        "id": 32,
+        "titulo": "Desenvolvimento Sustentável e Agenda 21",
+        "descricao": "Um livro didático que aborda os conceitos fundamentais de sustentabilidade e desenvolvimento sustentável, com foco na Agenda 21, Carta da Terra, Pacto Global e Responsabilidade Social. Visa capacitar estudantes para compreender e atuar em prol da sustentabilidade em suas comunidades e organizações.",
+        "tipo": "Livro",
+        "imagem": "prints/desenvolvimento sustentavel e agenda 21.png",
+        "arquivo": "pdfs/pdfsLIVROS/desenvolvimento-sustentavel-e-agenda-21-elaine-cristina-arantes-adriano-stadler-e-marcos-rogerio-maioli.pdf"
+    },
+    {
+        "id": 33,
+        "titulo": "Desenvolvimento Sustentável",
+        "descricao": "Texto de um curso sobre desenvolvimento sustentável, que define meio ambiente, discute a importância das conferências da ONU (Estocolmo, ECO92, Rio+20), explora princípios do direito ambiental, e enfatiza o papel dos magistrados como agentes transformadores na efetivação da proteção ambiental.",
+        "tipo": "Livro",
+        "imagem": "prints/desenvolvimento sustentavel marcos borba.png",
+        "arquivo": "pdfs/pdfsLIVROS/desenvolvimento-sustentavel-marcos-borba-caruggi.pdf"
+    },
+    {
+        "id": 34,
+        "titulo": "Desenvolvimento Sustentável: Uma Análise Histórica",
+        "descricao": "Um artigo que traça uma análise histórica do desenvolvimento, contrastando crescimento econômico com desenvolvimento. Discute como a concentração de renda e a falta de políticas públicas adequadas podem ser empecilhos, e propõe a necessidade de uma nova ordem internacional para um desenvolvimento verdadeiramente sustentável.",
+        "tipo": "Livro",
+        "imagem": "prints/desenvolvimento sustentavel uma analize historica.png",
+        "arquivo": "pdfs/pdfsLIVROS/desenvolvimento-sustentavel-uma-analise-historica-artigo-eduardo-da-silva-mattos.pdf"
+    },
+    {
+        "id": 35,
+        "titulo": "Desenvolvimento Sustentável: Uma Discussão Ambiental e Social",
+        "descricao": "O artigo discute a temática da sustentabilidade como uma forma de repensar a relação homem-natureza. Aborda o descompasso entre a utilização e a preservação dos recursos, e apresenta o desenvolvimento sustentável como um caminho para construir alternativas que integrem preservação ambiental, democracia e garantia da vida humana.",
+        "tipo": "Livro",
+        "imagem": "prints/desenvolvimento sustentavel uma discussao ambiental e social.png",
+        "arquivo": "pdfs/pdfsLIVROS/desenvolvimento-sustentavel-uma-discussao-ambiental-e-social-artigo-carla-montefusco-de-oliveira.pdf"
+    },
+    {
+        "id": 36,
+        "titulo": "Desenvolvimento Sustentável: Uma Perspectiva Econômico-Ecológica",
+        "descricao": "Oferece uma definição de desenvolvimento sustentável sob uma perspectiva da economia ecológica. Analisa a trajetória do conceito, desde o ecodesenvolvimento até a economia verde. Critica a premissa da 'sustentabilidade fraca' e argumenta pela necessidade de um 'estado estacionário' para a sustentabilidade ecológica.",
+        "tipo": "Livro",
+        "imagem": "prints/desenvolvimento sustentavel uma perspectiva economicoecologica.png",
+        "arquivo": "pdfs/pdfsLIVROS/desenvolvimento-sustentavel-uma-perspectiva-economicoecologica-ademar-ribeiro-romeiro.pdf"
+    },
+    {
+        "id": 37,
+        "titulo": "Do Micro ao Macro: Ecologia e Complexidade",
+        "descricao": "Uma coletânea de artigos que aborda a ecologia sob uma perspectiva da complexidade. Os temas vão desde a microbiologia e a fermentação, passando pela conservação marinha e a gestão de resíduos, até a importância das bactérias para o ecossistema, promovendo uma visão integrada da vida.",
+        "tipo": "Livro",
+        "imagem": "prints/do micro ao macro ecologia e complexidade.png",
+        "arquivo": "pdfs/pdfsLIVROS/do-micro-ao-macro-ecologia-e-complexidade-varios-autores.pdf"
+    },
+    {
+        "id": 38,
+        "titulo": "Ecologia e Conservação do Meio Ambiente",
+        "descricao": "Este livro aborda os princípios da ecologia e conservação, com foco em florestas tropicais. Discute temas como desmatamento, regeneração, sucessão ecológica e diversidade funcional, além de explorar a correção de solos salino-sódicos com rejeitos de mineração, como caulim e vermiculita.",
+        "tipo": "Livro",
+        "imagem": "prints/ecologia e conservacao do meio ambiente.png",
+        "arquivo": "pdfs/pdfsLIVROS/ecologia-e-conservacao-do-meio-ambiente-maria-jose-de-holanda-leite.pdf"
+    },
+    {
+        "id": 39,
+        "titulo": "Ecologia Geral",
+        "descricao": "Uma apostila abrangente sobre ecologia geral para um curso de Licenciatura em Biologia. Cobre desde os princípios históricos da ecologia até o estudo de populações, comunidades, biodiversidade, ecossistemas terrestres e aquáticos, e os impactos da ação antrópica no meio ambiente.",
+        "tipo": "Livro",
+        "imagem": "prints/ecologia geral.png",
+        "arquivo": "pdfs/pdfsLIVROS/ecologia-geral-ftc-ead-4487.pdf"
+    },
+    {
+        "id": 40,
+        "titulo": "Contradições no Processo de Preservação das Margens de Rios Urbanos no Território Brasileiro",
+        "descricao": "Este capítulo de livro analisa as contradições na preservação das Áreas de Preservação Permanente (APPs) em rios urbanos no Brasil. Debate a aplicação do Código Florestal, a ocupação desordenada e a importância de conceitos como 'território usado' para uma gestão mais eficaz e democrática dessas áreas.",
+        "tipo": "Livro",
+        "imagem": "prints/FERREIRAGALLO.CONTRADIESNOPROCESSODEPRESERVAODASMATAS.png",
+        "arquivo": "pdfs/pdfsLIVROS/FERREIRAGALLO.CONTRADIESNOPROCESSODEPRESERVAODASMARGENSDERIOSURBANOSNOTERRITRIOBRASILEIRO.pdf"
+    },
+    {
+        "id": 41,
+        "titulo": "Fundamentos de Ecologia",
+        "descricao": "Uma apostila com uma abordagem transdisciplinar sobre os fundamentos da ecologia. Explora a relação sociedade-natureza, economia e ecologia, ecologia política e conflitos ambientais. Aborda temas como justiça ambiental, racismo ambiental e alternativas como o 'bem viver' e o decrescimento.",
+        "tipo": "Livro",
+        "imagem": "prints/fundamentos de ecologia felipe milanez.png",
+        "arquivo": "pdfs/pdfsLIVROS/fundamentos-de-ecologia-felipe-milanez.pdf"
+    },
+    {
+        "id": 42,
+        "titulo": "Guia sobre Desenvolvimento Sustentável",
+        "descricao": "Um guia conciso sobre os 17 Objetivos de Desenvolvimento Sustentável (ODS) da Agenda 2030 da ONU. Apresenta cada um dos objetivos com suas respectivas metas, servindo como um material introdutório e de referência rápida sobre o pacto global para transformar o mundo.",
+        "tipo": "Livro",
+        "imagem": "prints/gui sobre desenvolvimento sustentavel.png",
+        "arquivo": "pdfs/pdfsLIVROS/guia-sobre-desenvolvimento-sustentavel-cidadania-em-portugal.pdf"
+    },
+    {
+        "id": 43,
+        "titulo": "Meio Ambiente e Desenvolvimento Sustentável: Impactos e Transformações",
+        "descricao": "Uma coletânea de artigos que aborda o meio ambiente e o desenvolvimento sustentável sob diversas óticas. Os temas incluem agroecologia, marcas coletivas na agricultura familiar, horticultura regenerativa, políticas públicas de educação ambiental, gestão de resíduos sólidos, turismo ecológico, entre outros.",
+        "tipo": "Livro",
+        "imagem": "prints/meio ambiente e desenvolvimento sustentavel.png",
+        "arquivo": "pdfs/pdfsLIVROS/Meio Ambiente e Desenvolvimento Sustentável.pdf"
+    },
+    {
+        "id": 44,
+        "titulo": "O Conceito de Desenvolvimento Sustentável",
+        "descricao": "Este capítulo de livro analisa o conceito de desenvolvimento sustentável desde sua origem histórica. Discute a polêmica em torno de sua definição, as diferentes perspectivas econômicas (ambiental, ecológica) e a necessidade de um conceito que integre as dimensões econômica, social e ambiental.",
+        "tipo": "Livro",
+        "imagem": "prints/o conceito de desenvolvimento sustentavel isabel mendes.png",
+        "arquivo": "pdfs/pdfsLIVROS/o-conceito-de-desenvolvimento-sustentavel-isabel-mendes.pdf"
+    },
+    {
+        "id": 45,
+        "titulo": "O Desafio do Desenvolvimento Sustentável",
+        "descricao": "Um artigo que reflete sobre as definições de desenvolvimento sustentável e sua importância para o contexto das cidades brasileiras. Argumenta que, embora o termo seja comum no discurso político, ele precisa ser traduzido em ações governamentais efetivas para o planejamento e desenvolvimento urbano sustentável.",
+        "tipo": "Livro",
+        "imagem": "prints/o desafio do desenvolvimento sustentavel gisele silva barbosa.png",
+        "arquivo": "pdfs/pdfsLIVROS/o-desafio-do-desenvolvimento-sustentavel-gisele-silva-barbosa.pdf"
+    },
+    {
+        "id": 46,
+        "titulo": "O Futuro que Queremos",
+        "descricao": "Uma cartilha ilustrada do INPE sobre a Rio+20, que explica o que é economia verde, desenvolvimento sustentável e erradicação da pobreza. Traça um histórico da temática ambiental, discute a 'pegada ecológica' e o papel da ciência, e oferece sugestões de ações cidadãs.",
+        "tipo": "Livro",
+        "imagem": "prints/o futuro que queremos.png",
+        "arquivo": "pdfs/pdfsLIVROS/o-futuro-que-queremos-instituto-nacional-de-pesquisas-espaciais.pdf"
+    },
+    {
+        "id": 47,
+        "titulo": "Princípios de Agroecologia",
+        "descricao": "Uma apostila que apresenta os princípios e bases da agroecologia. Aborda os conceitos fundamentais, as multidimensões da sustentabilidade (ecológica, social, econômica, etc.) e as etapas da transição agroecológica, que busca converter sistemas de produção convencionais em sistemas de base ecológica.",
+        "tipo": "Livro",
+        "imagem": "prints/principios de agroecologia.png",
+        "arquivo": "pdfs/pdfsLIVROS/principios-de-agroecologia-lia-rejane-silveira-reiniger-jose-geraldo-wizniewsky-e-marielen-priscila-kaufmann.pdf"
+    },
+    {
+        "id": 48,
+        "titulo": "Sustentabilidade e Transformação Social",
+        "descricao": "Este livro é um convite à reflexão sobre a sustentabilidade. Traça um histórico da crise ambiental, discute a biodiversidade, a água, as cidades, a pobreza, a desigualdade e a mudança climática. Apresenta o conceito de economia verde como uma oportunidade para a 'metamorfose' social e a ação cidadã.",
+        "tipo": "Livro",
+        "imagem": "prints/Sustentabilidade e Transformação Social.png",
+        "arquivo": "pdfs/pdfsLIVROS/Sustentabilidade_e_Transformacao_Social.pdf"
+    },
+    {
+        "id": 49,
+        "titulo": "Temas e Agendas para o Desenvolvimento Sustentável",
+        "descricao": "Uma coletânea de artigos organizada pelo Senado Federal para subsidiar os parlamentares nas discussões sobre a Rio+20. Aborda desde a herança da conferência, governança internacional, aspectos econômicos da economia verde, até temas como produção e consumo sustentáveis, segurança alimentar, cidades sustentáveis e mudança do clima.",
+        "tipo": "Livro",
+        "imagem": "prints/temas e agendas para o desenvolvimento sustentavel.png",
+        "arquivo": "pdfs/pdfsLIVROS/Temas e Agendas para o Desenvolvimento Sustentável.pdf"
+    },
+    {
+        "id": 50,
+        "titulo": "Fundamentos e Perspectivas do Desenvolvimento Sustentável e do Uso de Indicadores de Sustentabilidade em Propriedades Leiteiras",
+        "descricao": "Este capítulo de livro aborda a evolução histórica do conceito de desenvolvimento sustentável, desde os filósofos gregos até a Agenda 21. Apresenta e compara dois métodos de avaliação da sustentabilidade em propriedades leiteiras (SAFA/FAO e RISE), destacando a importância de indicadores para a tomada de decisão e o equilíbrio entre as dimensões ambiental, social e econômica.",
+        "tipo": "Livro",
+        "imagem": "prints/fundamentos e perspectivas do desenvolvimento sustentavel.png",
+        "arquivo": "pdfs/pdfsLIVROS/fundamentos-e-perspectivas-do-desenvolvimento-sustentavel.pdf"
     }
 ]
