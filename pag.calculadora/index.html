@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Carbono</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- NAVEGAÇÃO -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="#home">🌍 EcoCalc</a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link active">Início</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#calculadora" class="nav-link">Calculadora</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#dicas" class="nav-link">Dicas</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#sobre" class="nav-link">Sobre</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#blog" class="nav-link">Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contato" class="nav-link">Contato</a>
+                </li>
+            </ul>
+            <button class="nav-toggle">☰</button>
+        </div>
+    </nav>
+
+    <div class="container">
+        <section id="home">
+            <h1>🌍 Calculadora de Carbono</h1>
+            <p class="subtitle">Calcule sua pegada de carbono mensal e descubra como reduzir seu impacto ambiental</p>
+        </section>
+
+        <section id="calculadora">
+            <form id="carbonForm">
+                <!-- Transporte -->
+                <div class="section">
+                    <h2>🚗 Transporte</h2>
+                    <div class="form-group">
+                        <label for="carKm">Quilômetros de carro por mês:</label>
+                        <input type="number" id="carKm" value="500" min="0">
+                        <small>Média: 0.21 kg CO₂/km</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="busKm">Quilômetros de ônibus por mês:</label>
+                        <input type="number" id="busKm" value="100" min="0">
+                        <small>Média: 0.09 kg CO₂/km</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="flightHr">Horas de voo por mês:</label>
+                        <input type="number" id="flightHr" value="0" min="0">
+                        <small>Média: 60 kg CO₂/hora</small>
+                    </div>
+                </div>
+
+                <!-- Energia -->
+                <div class="section">
+                    <h2>⚡ Energia</h2>
+                    <div class="form-group">
+                        <label for="energyKwh">Consumo de energia (kWh/mês):</label>
+                        <input type="number" id="energyKwh" value="200" min="0">
+                        <small>Média: 0.45 kg CO₂/kWh</small>
+                    </div>
+                </div>
+
+                <!-- Alimentação -->
+                <div class="section">
+                    <h2>🍖 Alimentação</h2>
+                    <div class="form-group">
+                        <label for="meatMeals">Refeições com carne por semana:</label>
+                        <input type="number" id="meatMeals" value="5" min="0">
+                        <small>Média: 5 kg CO₂/refeição</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="vegetarianMeals">Refeições vegetarianas por semana:</label>
+                        <input type="number" id="vegetarianMeals" value="2" min="0">
+                        <small>Média: 1.5 kg CO₂/refeição</small>
+                    </div>
+                </div>
+
+                <!-- Consumo -->
+                <div class="section">
+                    <h2>🛍️ Consumo</h2>
+                    <div class="form-group">
+                        <label for="clothesPurchases">Compras de roupas por mês:</label>
+                        <input type="number" id="clothesPurchases" value="2" min="0">
+                        <small>Média: 30 kg CO₂/compra</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="electronicsPurchases">Compras de eletrônicos por ano:</label>
+                        <input type="number" id="electronicsPurchases" value="1" min="0">
+                        <small>Média: 150 kg CO₂/compra</small>
+                    </div>
+                </div>
+
+                <button type="button" id="calculateBtn" class="calculate-btn">Calcular Pegada de Carbono</button>
+            </form>
+
+            <div id="result" class="result hidden">
+                <h2>📊 Resultado</h2>
+                <div class="result-grid">
+                    <div class="result-item">
+                        <span class="result-label">Total Mensal:</span>
+                        <span id="totalMensal" class="result-value">0</span>
+                        <span class="result-unit">kg CO₂</span>
+                    </div>
+                    <div class="result-item">
+                        <span class="result-label">Total Anual:</span>
+                        <span id="totalAnual" class="result-value">0</span>
+                        <span class="result-unit">kg CO₂</span>
+                    </div>
+                    <div class="result-item">
+                        <span class="result-label">Árvores necessárias:</span>
+                        <span id="arvoresNecessarias" class="result-value">0</span>
+                        <span class="result-unit">árvores/ano</span>
+                    </div>
+                    <div class="result-item">
+                        <span class="result-label">Impacto:</span>
+                        <span id="impacto" class="result-value">0</span>
+                    </div>
+                </div>
+                <div id="recomendacoes" class="recomendacoes"></div>
+            </div>
+        </section>
+
+        <section id="dicas">
+            <h2>💚 Dicas para Reduzir sua Pegada de Carbono</h2>
+            <div class="dicas-grid">
+                <div class="dica-card">
+                    <h3>🚲 Transporte</h3>
+                    <p>Prefira caminhar, andar de bicicleta ou usar transporte público.</p>
+                </div>
+                <div class="dica-card">
+                    <h3>💡 Energia</h3>
+                    <p>Use lâmpadas LED e apague luzes ao sair dos cômodos.</p>
+                </div>
+                <div class="dica-card">
+                    <h3>🥗 Alimentação</h3>
+                    <p>Reduza o consumo de carne vermelha e prefira alimentos locais.</p>
+                </div>
+                <div class="dica-card">
+                    <h3>🛍️ Consumo</h3>
+                    <p>Compre apenas o necessário e prefira produtos duráveis.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="sobre">
+            <h2>🌱 Sobre a Calculadora</h2>
+            <p>Esta calculadora ajuda você a entender seu impacto ambiental baseado em hábitos de transporte, energia, alimentação e consumo.</p>
+            <br>
+            <p><strong>Fatores considerados:</strong></p>
+            <ul style="margin-left: 20px; margin-top: 10px;">
+                <li>🚗 Transporte (carro, ônibus, avião)</li>
+                <li>⚡ Consumo de energia elétrica</li>
+                <li>🍖 Hábitos alimentares</li>
+                <li>🛍️ Consumo de bens</li>
+            </ul>
+        </section>
+
+        <section id="blog">
+            <h2>📝 Últimos Artigos</h2>
+            <div class="blog-grid">
+                <div class="blog-post">
+                    <h3>Como ser mais sustentável</h3>
+                    <p>Dicas práticas para reduzir seu impacto ambiental...</p>
+                    <a href="#" class="read-more">Leia mais →</a>
+                </div>
+                <div class="blog-post">
+                    <h3>Energia renovável</h3>
+                    <p>Entenda como a transição para fontes limpas pode mudar o mundo...</p>
+                    <a href="#" class="read-more">Leia mais →</a>
+                </div>
+                <div class="blog-post">
+                    <h3>Alimentação sustentável</h3>
+                    <p>Guia para uma dieta que respeita o planeta...</p>
+                    <a href="#" class="read-more">Leia mais →</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="contato">
+            <h2>📧 Contato</h2>
+            <div class="contato-info">
+                <p><strong>Email:</strong> contato@ecocalc.com</p>
+                <p><strong>Telefone:</strong> (11) 99999-9999</p>
+                <div class="social-links">
+                    <a href="#" class="social-link">📱 Instagram</a>
+                    <a href="#" class="social-link">🐦 Twitter</a>
+                    <a href="#" class="social-link">📘 Facebook</a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
