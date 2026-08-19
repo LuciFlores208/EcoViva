@@ -64,13 +64,19 @@ O **EcoViva** busca incentivar novas atitudes, estimular a consciência ambienta
 
 ## 🛠️ Protótipo
 
-![Protótipo 1](https://github.com/user-attachments/assets/a97cdedc-5bcf-4540-ae77-9657687c980a)
+![Protótipo 1](./Eco1/capy.png)
 
-![Protótipo 2](https://github.com/user-attachments/assets/0d9834f3-70c2-4976-9fc4-63b572b934ce)
+![Protótipo 2](./Eco1/home.png)
 
-![Protótipo 3](https://github.com/user-attachments/assets/214e2e32-c7e5-4e7f-b72e-e2fee23b8677)
+![Protótipo 3](./Eco1/mundo.png)
 
-![Protótipo 4](https://github.com/user-attachments/assets/07bca3de-04ec-45c7-bf02-b1c69b0c228d)
+![Protótipo 4](./Eco1/quiz.png)
+
+## 🎥 Demonstração
+
+[▶️ Clique aqui para assistir ao vídeo](./Eco1/Eco1.mp4)
+
+
 
 ## 🙌 Projeto Final
 
