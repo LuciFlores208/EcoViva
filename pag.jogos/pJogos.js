@@ -14,6 +14,17 @@ fetch("pJogos.json")
   .then(response => response.json())
   .then(data => {
     games = data;
+  
+    const statusSalvos = JSON.parse(
+      localStorage.getItem("jogosStatus") || "{}"
+    );
+  
+    games.forEach(game => {
+      if (statusSalvos[game.id]) {
+        game.status = statusSalvos[game.id];
+      }
+    });
+  
     renderGames("todos");
   });
   
@@ -22,6 +33,19 @@ fetch("pJogos.json")
     if (status === "continuar") return '<span class="card-badge badge-continuar">Continuar</span>';
     if (status === "nao-jogados") return '<span class="card-badge badge-novo">Novo</span>';
     return '';
+  }
+
+  function salvarStatus(id, status) {
+    const statusSalvos = JSON.parse(
+      localStorage.getItem("jogosStatus") || "{}"
+    );
+  
+    statusSalvos[id] = status;
+  
+    localStorage.setItem(
+      "jogosStatus",
+      JSON.stringify(statusSalvos)
+    );
   }
   
   function renderGames(filter) {
@@ -53,17 +77,57 @@ fetch("pJogos.json")
           <p class="card-desc">${game.desc}</p>
         </div>
         <div class="card-footer">
-          <span class="card-level">${game.level}</span>
-        </div>
+
+  <div class="game-status" onclick="event.stopPropagation()">
+
+    <span class="status-label">STATUS:</span>
+
+    <select class="status-select" data-id="${game.id}">
+      <option value="nao-jogados" ${game.status === "nao-jogados" ? "selected" : ""}>
+        Não Jogado
+      </option>
+
+      <option value="continuar" ${game.status === "continuar" ? "selected" : ""}>
+        Continuar
+      </option>
+
+      <option value="jogados" ${game.status === "jogados" ? "selected" : ""}>
+        Jogado
+      </option>
+    </select>
+
+  </div>
+
+  <span class="card-level">${game.level}</span>
+
+</div>
       `;
   
       card.addEventListener("click", () => openGame(game));
       grid.appendChild(card);
+
+      const statusSelect = card.querySelector(".status-select");
+
+statusSelect.addEventListener("change", (event) => {
+  event.stopPropagation();
+
+  const novoStatus = event.target.value;
+
+  game.status = novoStatus;
+
+  salvarStatus(game.id, novoStatus);
+
+  renderGames(filter);
+});
+
+card.addEventListener("click", () => openGame(game));
+
+grid.appendChild(card);
     });
   }
   
   function openGame(game) {
-    window.location.href = game.page;
+    window.open(game.page, "_blank");
   }
   
   function initFilters() {
