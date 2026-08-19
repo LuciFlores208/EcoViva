@@ -11,8 +11,8 @@ Compreensão e conscientização sobre temas relacionados à **sustentabilidade 
 | Nome | GitHub | Contato |
 |---|---|---|
 | Clara D´avila | [Clara Elisa](https://github.com/Claraelisa05) | claraelisa.davila@gmail.com |
-| Guilherme Rodrigues | [guirodrigues26](https://github.com/guirodrigues26) | |
-| Luciana Flores | [LuciFlores208](https://github.com/LuciFlores208) | ecoviva.world@gmail.com |
+| Guilherme Rodrigues | [guirodrigues26](https://github.com/guirodrigues26) | | guicastorsilva@gmail.com
+| Luciana Flores | [LuciFlores208](https://github.com/LuciFlores208) | luci.barbosaflores@gmail.com |
 
 ## 📝 Descrição
 
