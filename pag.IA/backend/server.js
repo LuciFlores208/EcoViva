@@ -1,5 +1,3 @@
-// server.js - EcoViva Chat com Capy 🦫 + Ollama
-
 const express = require('express');
 const cors = require('cors');
 const path = require('path');
@@ -7,20 +5,17 @@ const path = require('path');
 const app = express();
 const PORT = 3000;
 
-// ===== CONFIGURAÇÕES DO OLLAMA =====
+
 
 const OLLAMA_URL = 'http://localhost:11434/api/chat';
 const MODELO = 'llama3.2';
 
-// ===== MIDDLEWARE =====
 
 app.use(cors());
 app.use(express.json());
 
-// Permite acessar o frontend
 app.use(express.static(path.join(__dirname, '../frontend')));
 
-// ===== ROTA DE TESTE =====
 
 app.get('/api/health', (req, res) => {
     res.json({
@@ -31,13 +26,12 @@ app.get('/api/health', (req, res) => {
     });
 });
 
-// ===== ROTA PRINCIPAL DO CHAT =====
 
 app.post('/api/chat', async (req, res) => {
 
     const { pergunta } = req.body;
 
-    // ===== VALIDAÇÃO =====
+   
 
     if (!pergunta || pergunta.trim() === '') {
         return res.status(400).json({
@@ -47,7 +41,6 @@ app.post('/api/chat', async (req, res) => {
 
     try {
 
-        // ===== PERSONALIDADE DA CAPY =====
 
         const contexto = `
 Você é a Capy, uma capivara muito simpática e inteligente que trabalha no projeto EcoViva.
@@ -83,9 +76,6 @@ PERGUNTA DO USUÁRIO:
 
 ${pergunta}
 `;
-
-        // ===== ENVIA PARA O OLLAMA =====
-
         const respostaOllama = await fetch(OLLAMA_URL, {
             method: 'POST',
 
@@ -113,8 +103,6 @@ ${pergunta}
             })
         });
 
-        // ===== VERIFICA SE O OLLAMA RESPONDEU =====
-
         if (!respostaOllama.ok) {
 
             const erroOllama = await respostaOllama.text();
@@ -128,7 +116,6 @@ ${pergunta}
             });
         }
 
-        // ===== PEGA A RESPOSTA =====
 
         const dados = await respostaOllama.json();
 
@@ -141,11 +128,9 @@ ${pergunta}
             });
         }
 
-        // ===== FORMATA A RESPOSTA =====
 
         const respostaFormatada = texto.replace(/\n/g, '<br>');
 
-        // ===== ENVIA PARA O FRONTEND =====
 
         res.json({
             resposta: respostaFormatada,
@@ -159,7 +144,6 @@ ${pergunta}
         let mensagemErro =
             'Desculpe, tive um probleminha técnico! 😅 Tente novamente.';
 
-        // Ollama não está aberto
         if (
             error.code === 'ECONNREFUSED' ||
             error.message.includes('fetch failed')
@@ -176,7 +160,6 @@ ${pergunta}
     }
 });
 
-// ===== ROTA 404 =====
 
 app.use((req, res) => {
 
@@ -185,8 +168,6 @@ app.use((req, res) => {
     });
 
 });
-
-// ===== INICIA O SERVIDOR =====
 
 app.listen(PORT, () => {
 
