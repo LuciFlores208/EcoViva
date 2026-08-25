@@ -32,3 +32,8 @@ anterior.onclick = () => {
 }
 
 atualizarGaleria()
+
+setInterval(() => {
+    atual = (atual + 1) % imagens.length
+    atualizarGaleria()
+}, 4000)

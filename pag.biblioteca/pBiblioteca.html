@@ -30,19 +30,30 @@
             <div class="filtros">
                 <h4>Buscar por Tipo</h4>
                 <div class="grupo-botoes">
-                    <button onclick="filtrarTipo('Todos')">
+                    <button 
+                    class="ativo"
+                    data-tipo="Todos"
+                    onclick="filtrarTipo('Todos')">
                         Todos
                     </button>
-                    <button onclick="filtrarTipo('Artigo')">
+                    <button 
+                    data-tipo="Artigo"
+                    onclick="filtrarTipo('Artigo')">
                         Artigos
                     </button>
-                    <button onclick="filtrarTipo('Livro')">
+                    <button 
+                    data-tipo="Livro"
+                    onclick="filtrarTipo('Livro')">
                         Livros
                     </button>
-                    <button onclick="filtrarTipo('Noticia')">
+                    <button 
+                    data-tipo="Noticia"
+                    onclick="filtrarTipo('Noticia')">
                         Notícias
                     </button>
-                    <button onclick="filtrarTipo('Tutorial')">
+                    <button 
+                    data-tipo="Tutorial"
+                    onclick="filtrarTipo('Tutorial')">
                         Tutoriais
                     </button>
                 </div>
@@ -50,18 +61,30 @@
             <div class="filtros">
                 <h4>Status</h4>
                 <div class="grupo-botoes">
-                    <button onclick="filtrarStatus('Todos')">
-                        Tudo
-                    </button>
-                    <button onclick="filtrarStatus('Lido')">
-                        Lido
-                    </button>
-                    <button onclick="filtrarStatus('Lendo')">
-                        Lendo
-                    </button>
-                    <button onclick="filtrarStatus('Quero ler')">
-                        Quero ler
-                    </button>
+                    <button
+            class="ativo"
+            data-status="Todos"
+            onclick="filtrarStatus('Todos')">
+            Tudo
+        </button>
+
+        <button
+            data-status="Lido"
+            onclick="filtrarStatus('Lido')">
+            Lido
+        </button>
+
+        <button
+            data-status="Lendo"
+            onclick="filtrarStatus('Lendo')">
+            Lendo
+        </button>
+
+        <button
+            data-status="Quero ler"
+            onclick="filtrarStatus('Quero ler')">
+            Quero ler
+        </button>
                 </div>
             </div>
         </div>

@@ -34,13 +34,43 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Filtrar por tipo
 function filtrarTipo(tipo) {
+
     tipoSelecionado = tipo;
+
+    document.querySelectorAll("[data-tipo]").forEach(botao => {
+        botao.classList.remove("ativo");
+    });
+
+    const botaoSelecionado = document.querySelector(
+        `[data-tipo="${tipo}"]`
+    );
+
+    if (botaoSelecionado) {
+        botaoSelecionado.classList.add("ativo");
+    }
+
     renderizarCards();
 }
 
-// Filtrar por status
+// Filtrar por Status
 function filtrarStatus(status) {
+
     statusSelecionado = status;
+
+    // Remove o destaque de todos os botões de status
+    document.querySelectorAll("[data-status]").forEach(botao => {
+        botao.classList.remove("ativo");
+    });
+
+    // Adiciona o destaque ao botão selecionado
+    const botaoSelecionado = document.querySelector(
+        `[data-status="${status}"]`
+    );
+
+    if (botaoSelecionado) {
+        botaoSelecionado.classList.add("ativo");
+    }
+
     renderizarCards();
 }
 

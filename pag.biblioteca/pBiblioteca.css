@@ -109,6 +109,18 @@ body{
     transform:scale(1.05);
 }
 
+.grupo-botoes button.ativo {
+    background: #0E9647;
+    color: white;
+    font-weight: bold;
+    box-shadow: 0 0 0 2px white;
+}
+
+.grupo-botoes button.ativo:hover {
+    background: #0b7c3b;
+    transform: scale(1.05);
+}
+
 .busca{
     display:flex;
     justify-content:center;
