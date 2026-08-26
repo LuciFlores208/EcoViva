@@ -6,14 +6,7 @@
 }
 
 body{
-    background: linear-gradient(
-        to right,
-        #054D23 0%,
-        #054D23 70%,
-        rgba(5,77,35,.65) 82%,
-        rgba(5,77,35,.2) 90%,
-        #FAF8F4 100%
-    );
+    background:#FAF8F4;
 }
 
 /* HEADER */
@@ -51,7 +44,7 @@ body{
 }
 
 .header a:hover{
-    color:#0E9647;
+    color:#078C00;
 }
 
 .header h4{
@@ -61,11 +54,7 @@ body{
 /* TOPO VERDE */
 
 .topo{
-    background: linear-gradient(
-        135deg,
-        #08662F,
-        #0C853E
-    );
+    background: #155912;
     color:white;
 
     display:flex;
@@ -121,7 +110,7 @@ body{
     border:none;
     border-radius:50px;
 
-    background: #0C853E;
+    background: #078C00;
     color:white;
 
     font-size:16px;
@@ -132,7 +121,7 @@ body{
 
 .card-mapa button:hover{
     transform:translateY(-3px);
-    background:#40916C;
+    background:#078C00;
 }
 
 .card-mapa button:first-of-type{
@@ -142,23 +131,24 @@ body{
 /* CORPO */
 
 .corpo{
-    background:#054D23;
+    background:#FFFFFF;
     padding:100px 0;
     text-align:center;
-    z-index: 2;
+    z-index:2;
     width:100%;
     position:relative;
-    box-shadow:  -80px 25px 50px 105px #054D23
+
+    border-top:20px solid #0E9647;
 }
 
 .corpo h1{
-    color:#47db85;
+    color:#078C00;
     font-size:48px;
     margin-bottom:40px;
 }
 
 .corpo h2{
-    color:#47db85;
+    color:#078C00;
     margin-top:25px;
     font-size:32px;
 }
@@ -174,7 +164,7 @@ body{
 .corpo p{
     line-height:1.9;
     font-size:18px;
-    color: #fff;
+    color: #333;
 }
 
 .corpo h1,
@@ -247,7 +237,7 @@ body{
 /* FOOTER */
 
 footer{
-    background:#063019;
+    background:#155912;
     color:white;
 
     padding:60px;
@@ -266,6 +256,6 @@ footer{
 }
 
 .destaque1{
-    color: #47db85;
+    color: #078C00;
     font-weight: bold;
 }
