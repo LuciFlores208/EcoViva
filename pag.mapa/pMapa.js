@@ -33,7 +33,25 @@ anterior.onclick = () => {
 
 atualizarGaleria()
 
+<<<<<<< HEAD
+function mensagem() {
+    alert("🌱 Obrigado por fazer parte do EcoViva!");
+}
+
+function copiarEmail() {
+    const email = document.getElementById("email").textContent;
+
+    navigator.clipboard.writeText(email)
+        .then(() => {
+            alert("📋 E-mail copiado!");
+        })
+        .catch(() => {
+            alert("❌ Não foi possível copiar o e-mail.");
+        });
+}
+=======
 setInterval(() => {
     atual = (atual + 1) % imagens.length
     atualizarGaleria()
 }, 4000)
+>>>>>>> a9516fa402e4f1aca9414f80b57bebb3c89da171
