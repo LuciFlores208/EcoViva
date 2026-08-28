@@ -4,25 +4,30 @@
     padding:0;
     box-sizing:border-box;
    font-family: 'Montserrat', sans-serif;
-
-    
 }
-h1, h2, h3 {
-    font-family: 'Playfair Display', serif;
+h1, h2, h3, nav, button {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700; /* negrito */
 }
 .hero-text h1 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Poppins', sans-serif;
     font-size: 70px;
+    font-weight: 700; /* negrito */
 }
 
 .cards article h2 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Poppins', sans-serif;
     font-size: 40px;
+    font-weight: 700; /* negrito */
 }
-
+.destaque{
+     color: #078C00;
+    font-weight: 700;
+}
 .sustentabilidade h2,
 .desafios h2 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700; /* negrito */
 }
 body{
     background:#f8f8f3;
@@ -32,25 +37,28 @@ body{
 }
 
 nav{
-    position:absolute;
-    top:0;
-    left:0;
-    width:100%;
-    z-index:10;
+    position: absolute; 
+    top: -50px; 
+    left: 0; 
+    width: 100%; 
+    z-index: 10; 
 
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
 
-    padding:20px 8%;
+    padding: 20px 8%;
 }
 
 .logo{
-    color:#fff;
-    font-size:2rem;
-    font-weight:bold;
+   width: 120px;
+    height: auto;
+    display: block;
 }
 
+.logo img {
+    width: 150px;
+}
 nav ul{
     display:flex;
     gap:30px;
@@ -64,7 +72,7 @@ nav a{
 }
 
 nav a:hover{
-    color:#9be28f;
+    color:#078C00;
 }
 
 .home-hero{
@@ -94,7 +102,7 @@ nav a:hover{
 }
 
 .hero-text p{
-    font-size:24px;
+    font-size:35px;
 }
 
 .principal{
@@ -112,14 +120,7 @@ nav a:hover{
     align-items: flex-start;
 }
 
-.titulo-verde {
-  width: 390px;
-    height: 60px;
-    background: #476b3a;
-    border-radius: 40px;
-    margin-bottom: 30px;
-    
-}
+
 
 .cards {
   flex: 1;
@@ -200,22 +201,20 @@ nav a:hover{
 }
 
 footer{
-    margin-top:0;
-    background:#476b3a;
-    color:white;
+    margin-top: 0;
+    background: #155912;
+    color: white;
 
-    display:flex;
-    justify-content:space-around;
-    align-items:flex-start;
-    flex-wrap:wrap;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
-    padding:50px;
-}
+    padding: 30px 10%;
+    gap: 40px;
 
-.footer-logo{
-    font-size:32px;
-    font-weight:bold;
-}
+    min-height: auto;}
+
+
 
 footer h3{
     margin-bottom:20px;
@@ -297,6 +296,9 @@ footer button:hover{
     text-align: center;
     margin-bottom: 8px;
 }
+.site-box a:hover{
+    color: #078C00;
+}
 
 #botao {
     width: 165px;
@@ -312,9 +314,7 @@ footer button:hover{
 #botao:hover {
     background: #476b3a;
 }
-.destaque {
-color:#476b3a;
-}
+
 
 a {
     color:#333;
@@ -333,13 +333,44 @@ a {
     fill: #9be28f;
     transform: scale(1.15);
 }
-.membro {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    margin: 8px 0;
-}
 .membro a {
     display: flex;
     align-items: center;
+    gap: 8px;
+    color: inherit;
+    text-decoration: none;
+}
+
+.membro a:hover {
+    color: #078C00;
+}
+
+.github-icon {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+}
+.frase {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+    font-weight: 500;
+    color: white;
+    text-align: center;
+}
+
+.linha {
+    display: block;
+    width: 300px;
+    height: 3px;
+    background: #2F692F;
+    margin: 12px auto;
+    border-radius: 10px;
+}
+.proposito {
+    padding: 90px 8% 40px;
+}
+.footer-logo img {
+    width: 200px;
+    height: auto;
+    display: block;
 }

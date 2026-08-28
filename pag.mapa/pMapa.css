@@ -247,15 +247,58 @@ body{
 /* FOOTER */
 
 footer{
-    background:#063019;
+    margin-top:0;
+    background:#476b3a;
     color:white;
 
-    padding:60px;
+    display:flex;
+    justify-content:space-around;
+    align-items:flex-start;
+    flex-wrap:wrap;
 
-    text-align:center;
-    z-index: 3;
-    width:100%;
-    
+    padding:50px;
+}
+
+.footer-logo{
+    font-size:32px;
+    font-weight:bold;
+}
+
+footer h3{
+    margin-bottom:20px;
+}
+
+footer p{
+    margin:8px 0;
+}
+
+footer input{
+    width:220px;
+    padding:12px;
+    border:none;
+    border-radius:25px;
+    margin-bottom:10px;
+}
+
+footer button{
+    padding:12px 25px;
+    border:none;
+    border-radius:25px;
+    background:white;
+    color:#476b3a;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+footer button:hover{
+    background:#ececec;
+}
+
+@media(max-width:900px){ 
+    footer{
+        gap:40px;
+        text-align:center;
+    }
 }
 
 /* DESTAQUE */
@@ -268,4 +311,60 @@ footer{
 .destaque1{
     color: #47db85;
     font-weight: bold;
+}
+.email-box,
+.site-box {
+    width: 280px;
+    background: white;
+    color: #333;
+    padding: 8px;
+    border-radius: 20px;
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+#botao {
+    width: 165px;
+    padding: 7px;
+    border: none;
+    border-radius: 20px;
+    background: #5d8955;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#botao:hover {
+    background: #476b3a;
+}
+.destaque {
+color:#476b3a;
+}
+
+a {
+    color:#333;
+}
+.dg {
+   margin-top: 85px;
+}
+.github-icon {
+    width: 20px;
+    height: 20px;
+    fill: white;
+    transition: 0.2s;
+}
+
+.github-icon:hover {
+    fill: #9be28f;
+    transform: scale(1.15);
+}
+.membro {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 8px 0;
+}
+.membro a {
+    display: flex;
+    align-items: center;
 }
