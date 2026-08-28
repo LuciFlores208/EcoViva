@@ -2,7 +2,7 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:Arial, Helvetica, sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 body{
@@ -109,6 +109,18 @@ body{
     transform:scale(1.05);
 }
 
+.grupo-botoes button.ativo {
+    background: #0E9647;
+    color: white;
+    font-weight: bold;
+    box-shadow: 0 0 0 2px white;
+}
+
+.grupo-botoes button.ativo:hover {
+    background: #0b7c3b;
+    transform: scale(1.05);
+}
+
 .busca{
     display:flex;
     justify-content:center;
@@ -190,23 +202,22 @@ body{
     border-radius:15px 15px 0 0;
 }
 
-.card-tutorial{
-    width:100%;
-    min-height:220px;
-    background:#fff;
-    border-radius:20px;
-    padding:25px;
-    text-decoration:none;
-    color:#1B4332;
-    box-shadow:0 6px 18px rgba(0,0,0,.08);
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    gap:22px;
-    text-align:center;
-    transition:.3s;
-    box-sizing:border-box;
+.card-tutorial{ 
+    width:100%; 
+    min-height:370px; 
+    background:#fff; 
+    border-radius:20px; 
+    padding:25px; 
+    text-decoration:none; 
+    color:#1B4332; 
+    box-shadow:0 6px 18px rgba(0,0,0,.08); 
+    display:flex; 
+    flex-direction:column; 
+    align-items:center; 
+    justify-content:flex-start;
+    text-align:center; 
+    transition:.3s; 
+    box-sizing:border-box; 
 }
 
 #cards.tutoriais{
@@ -215,18 +226,16 @@ body{
     margin: 0 auto;
 }
 
-.tutorial-link{
-    display:flex;
-    flex-direction:column;
+.tutorial-link{ 
+    width:100%;
+    display:grid;
+    grid-template-rows:120px 125px;
     align-items:center;
-    justify-content:center;
-    gap:22px;
-    flex:1;
-
-    text-decoration:none;
+    justify-items:center;
+    text-decoration:none; 
     color:#1B4332;
+    flex:none;
 }
-
 .tutorial-link:link,
 .tutorial-link:visited,
 .tutorial-link:hover,
@@ -240,15 +249,16 @@ body{
     box-shadow:0 12px 28px rgba(0,0,0,.15);
 }
 
-.video-circle{
-    width:90px;
-    height:90px;
-    border-radius:50%;
-    background:#0E9647;
-    display:flex;
-    justify-content:center;
-    align-items:center;
+.video-circle{ 
+    width:90px; 
+    height:90px; 
+    border-radius:50%; 
+    background:#0E9647; 
+    display:flex; 
+    justify-content:center; 
+    align-items:center; 
     transition:.3s;
+    flex-shrink:0;
 }
 
 .card-tutorial:hover .video-circle{
@@ -262,10 +272,18 @@ body{
     margin: 0; 
 }
 
-.card-tutorial h3{
-    font-size:18px;
-    font-weight:600;
+.card-tutorial h3{ 
+    width:100%;
+    height:125px;
+    margin:0;
+    display:flex;
+    align-items:flex-start;
+    justify-content:center;
+    text-align:center;
+    font-size:18px; 
+    font-weight:600; 
     line-height:1.4;
+    overflow:hidden;
 }
 
 .card-link{
@@ -376,8 +394,8 @@ body{
     font-size:32px;
 }
 
-.status-card{
-    margin-top:auto;
+.status-card{ 
+    margin-top:auto; 
 }
 
 .status-card label{

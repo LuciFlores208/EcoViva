@@ -81,9 +81,9 @@
   
   .nav-links a {
     font-family: var(--pixel-font);
-    font-size: 7px;
-    color: var(--text-muted);
-    transition: color 0.2s;
+  font-size: 9px;
+  color: var(--text-muted);
+  transition: color 0.2s;
   }
   
   .nav-links a:hover {
@@ -107,9 +107,9 @@
   .hero-inner {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 40px;
-    max-width: 960px;
+    justify-content: center;
+    gap: 20px;
+    max-width: 900px;
     margin: 0 auto;
   }
   
@@ -190,12 +190,12 @@
   
   .hero-image {
     flex: 0 0 auto;
-    max-width: 340px;
-    width: 100%;
-    border: 3px solid var(--green-dim);
-    box-shadow: 6px 6px 0 var(--green-border);
-    image-rendering: pixelated;
-    overflow: hidden;
+  width: 300px;
+  height: 400px; /* diminua esse valor */
+  border: 3px solid var(--green-dim);
+  box-shadow: 6px 6px 0 var(--green-border);
+  image-rendering: pixelated;
+  overflow: hidden;
   }
   
   .hero-image img {
@@ -360,9 +360,10 @@
   .card-footer {
     padding: 8px 14px 10px;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
     border-top: 1px solid #1e3a1e;
+    gap: 10px;
   }
   
   .card-level {
@@ -370,6 +371,53 @@
     font-size: 6px;
     color: var(--green-accent);
   }
+
+  .game-status {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 0;
+    padding-top: 0;
+    border-top: none;
+  }
+
+.status-label {
+  font-family: var(--pixel-font);
+  font-size: 8px;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+.status-select {
+  appearance: none;
+  -webkit-appearance: none;
+  font-family: var(--pixel-font);
+  font-size: 8px;
+  padding: 7px 24px 7px 8px;
+  background: var(--bg-dark);
+  color: var(--text);
+  border: 2px solid var(--border-color);
+  cursor: pointer;
+  outline: none;
+  image-rendering: pixelated;
+  background-image: linear-gradient(45deg, transparent 50%, currentColor 50%),
+                    linear-gradient(135deg, currentColor 50%, transparent 50%);
+  background-position:
+    calc(100% - 10px) 50%,
+    calc(100% - 6px) 50%;
+  background-size:
+    4px 4px,
+    4px 4px;
+  background-repeat: no-repeat;
+}
+
+.status-select:hover {
+  border-color: var(--accent);
+}
+
+.status-select:focus {
+  border-color: var(--accent);
+}
   
   .card-badge {
     position: absolute;
@@ -384,8 +432,7 @@
   .badge-jogado  { background: var(--green-bright); }
   .badge-novo    { background: #ff9800; }
   .badge-continuar { background: #2196f3; color: #fff; }
-  
-  
+
   .footer {
     background: #0d150d;
     border-top: 2px solid var(--green-dim);
