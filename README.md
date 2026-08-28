@@ -55,7 +55,9 @@ O **EcoViva** foi criado com o objetivo de contribuir para esse processo, utiliz
 
 ## Como utilizar o Ollama AI?
   Primeiro devemos realizar o download da IA no seu site **https://ollama.com/download**. Em seguida, verificar a instalação (no powershell ou cmd) através do seguinte comando **Ollama --version**. O Ollama utiliza alguns modelos de IA que precisam ser instalados pelo usuário em sua máquina, logo, entre no powershell e execute o comando "**ollama pull llama3.2"**. 
+  
   Após o download, podemos verificar se o modelo foi instalado corretamente através do comando: **ollama list**, O modelo llama3.2 deverá aparecer na lista.
+
 Com tudo isso feito, basta abrir o Ollama e realizar a integração com o projeto. No terminal do vs code acessamos a pasta backend e iniciamos nosso **server.js** que irá fazer a comunicação com a IA, executar o html e fazer uma pergunta à nossa querida capy😃. 
 
 ## 🎉 Conclusão
