@@ -237,19 +237,14 @@ body{
 /* FOOTER */
 
 footer{
-<<<<<<< HEAD
     margin-top:0;
     background:#476b3a;
-=======
     background:#155912;
->>>>>>> a9516fa402e4f1aca9414f80b57bebb3c89da171
     color:white;
-
     display:flex;
     justify-content:space-around;
     align-items:flex-start;
     flex-wrap:wrap;
-
     padding:50px;
 }
 
