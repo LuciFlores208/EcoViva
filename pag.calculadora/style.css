@@ -1,28 +1,62 @@
-* { margin: 0; padding: 0; box-sizing: border-box; }
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
 
 body {
-    font-family: 'Segoe UI', system-ui, sans-serif;
-    background: #254D26;
+    background: #2F692F;
     color: #333;
     min-height: 100vh;
-    padding-bottom: 80px;
 }
 
 .navbar {
     background: #fff;
-    padding: 0 30px;
     height: 60px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     max-width: 100%;
     box-shadow: 0 1px 4px rgba(0,0,0,.08);
+    padding: 20px 8%;
+    z-index: 10; 
+    display: flex; 
+
+    
+    top: 0;
+    left: 0;
 }
 
-.navbar .logo { font-weight: 800; font-size: 1.15rem; color: #254D26; text-decoration: none; }
-.navbar ul { display: flex; gap: 22px; list-style: none; }
-.navbar a { text-decoration: none; color: #555; font-size: .85rem; font-weight: 600; }
-.navbar a:hover { color: #254D26; }
+.navbar .logo{
+    width: 120px;
+     height: auto;
+     display: block;
+ }
+ 
+ .logo img {
+     width: 150px;
+ }
+
+ nav ul{
+    display:flex;
+    gap:30px;
+    list-style:none;
+}
+
+nav a{
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+nav a:hover{
+    color: #078C00;
+}
+
 
 
 .card {
@@ -83,7 +117,7 @@ button {
     width: 100%;
     padding: 14px;
     margin-top: 10px;
-    background: #2e7d32;
+    background: #078C00;
     color: #fff;
     border: none;
     border-radius: 10px;
@@ -141,18 +175,60 @@ button:hover { background: #256428; transform: translateY(-1px); }
 .card > ul { margin-left: 20px; font-size: .85rem; color: #555; line-height: 1.7; }
 
 
-.rodape {
-    position: fixed;
-    bottom: 0; left: 0; right: 0;
-    background: #1e3d1f;
-    min-height: 60px;
-    padding: 12px 20px;
+footer {
+    margin-top: 0;
+    background: #ffffff;
+    color: #254D26;
     display: flex;
+    justify-content: flex-start;
+    gap: 200px;
     align-items: center;
-    justify-content: center;
+    padding: 30px 12%;
+    min-height: auto;
 }
 
-.rodape img { max-height: 40px; width: auto; }
+/* LOGO */
+.footer-logo img {
+    width: 200px;
+    height: auto;
+    display: block;
+}
+
+/* TÍTULO */
+footer h3 {
+    margin-bottom: 15px;
+    color: #254D26;
+}
+
+/* MEMBROS */
+
+.membro {
+    margin: 8px 0;
+}
+
+.membro a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #254D26;
+    text-decoration: none;
+}
+
+.membro a:hover {
+    color: #078C00;
+}
+
+/* ÍCONE DO GITHUB */
+.github-icon {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+    transition: 0.2s;
+}
+
+.membro a:hover .github-icon {
+    transform: scale(1.15);
+}
 
 
 @media (max-width: 700px) {
