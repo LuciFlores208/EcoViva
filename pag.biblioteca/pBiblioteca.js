@@ -1,14 +1,20 @@
+
 let biblioteca = [];
 
 let tipoSelecionado = "Todos";
 let statusSelecionado = "Todos";
 
-// Carrega o JSON
+
+// =========================
+// CARREGAR OS JSONs
+// =========================
+
 Promise.all([
     fetch("pBiblioteca.json").then(r => r.json()),
     fetch("pNoticias.json").then(r => r.json()),
     fetch("pTutoriais.json").then(r => r.json())
 ])
+
 .then(([bibliotecaDados, noticiasDados, tutoriaisDados]) => {
 
     biblioteca = [
@@ -20,95 +26,154 @@ Promise.all([
     renderizarCards();
 
 })
-.catch(erro => console.log(erro));
-// Busca em tempo real
+
+.catch(erro => {
+    console.log("Erro ao carregar os arquivos:", erro);
+});
+
+
+// =========================
+// BUSCA
+// =========================
+
 document.addEventListener("DOMContentLoaded", () => {
 
     const campoBusca = document.getElementById("busca");
 
     campoBusca.addEventListener("input", () => {
+
         renderizarCards();
+
     });
 
 });
 
-// Filtrar por tipo
+
+// =========================
+// FILTRAR POR TIPO
+// =========================
+
 function filtrarTipo(tipo) {
 
     tipoSelecionado = tipo;
 
-    document.querySelectorAll("[data-tipo]").forEach(botao => {
-        botao.classList.remove("ativo");
-    });
+    document
+        .querySelectorAll("[data-tipo]")
+        .forEach(botao => {
 
-    const botaoSelecionado = document.querySelector(
-        `[data-tipo="${tipo}"]`
-    );
+            botao.classList.remove("ativo");
+
+        });
+
+    const botaoSelecionado =
+        document.querySelector(`[data-tipo="${tipo}"]`);
 
     if (botaoSelecionado) {
+
         botaoSelecionado.classList.add("ativo");
+
     }
 
     renderizarCards();
 }
 
-// Filtrar por Status
+
+// =========================
+// FILTRAR POR STATUS
+// =========================
+
 function filtrarStatus(status) {
 
     statusSelecionado = status;
 
-    // Remove o destaque de todos os botões de status
-    document.querySelectorAll("[data-status]").forEach(botao => {
-        botao.classList.remove("ativo");
-    });
+    document
+        .querySelectorAll("[data-status]")
+        .forEach(botao => {
 
-    // Adiciona o destaque ao botão selecionado
-    const botaoSelecionado = document.querySelector(
-        `[data-status="${status}"]`
-    );
+            botao.classList.remove("ativo");
+
+        });
+
+    const botaoSelecionado =
+        document.querySelector(`[data-status="${status}"]`);
 
     if (botaoSelecionado) {
+
         botaoSelecionado.classList.add("ativo");
+
     }
 
     renderizarCards();
 }
 
-// Criar os cards
+
+// =========================
+// RENDERIZAR CARDS
+// =========================
+
 function renderizarCards() {
 
     const container = document.getElementById("cards");
 
-    // Altera o layout conforme o tipo selecionado
+    if (!container) return;
+
+
+    // Layout dos tutoriais
+
     if (tipoSelecionado === "Tutorial") {
+
         container.classList.add("tutoriais");
+
     } else {
+
         container.classList.remove("tutoriais");
+
     }
 
-    const textoBusca = document
-        .getElementById("busca")
-        .value
-        .toLowerCase();
+
+    const campoBusca =
+        document.getElementById("busca");
+
+    const textoBusca =
+        campoBusca.value.toLowerCase();
+
 
     container.innerHTML = "";
+
+
+    // FILTROS
 
     const resultados = biblioteca.filter(item => {
 
         const buscaValida =
-            item.titulo.toLowerCase().includes(textoBusca);
+            item.titulo
+                .toLowerCase()
+                .includes(textoBusca);
 
-            const tipoValido =
+
+        const tipoValido =
             tipoSelecionado === "Todos"
+
                 ? item.tipo !== "Noticia"
+
                 : item.tipo === tipoSelecionado;
+
 
         const statusValido =
             statusSelecionado === "Todos" ||
-            (item.status && item.status === statusSelecionado);
 
-        return buscaValida && tipoValido && statusValido;
+            (item.status &&
+             item.status === statusSelecionado);
+
+
+        return buscaValida &&
+               tipoValido &&
+               statusValido;
+
     });
+
+
+    // SEM RESULTADOS
 
     if (resultados.length === 0) {
 
@@ -121,150 +186,240 @@ function renderizarCards() {
         return;
     }
 
+
+    // CRIAR CARDS
+
     resultados.forEach(item => {
 
+
+        // =========================
+        // NOTÍCIAS
+        // =========================
+
         if (item.tipo === "Noticia") {
-    
+
             container.innerHTML += `
+
                 <a
                     class="card-noticia"
                     href="${item.link}"
                     target="_blank"
-                >
-    
-                    <img src="${item.imagem}" alt="${item.titulo}">
-    
-                    <h3>${item.titulo}</h3>
-    
-                    <p>Clique para acessar o portal</p>
-    
+                    rel="noopener noreferrer">
+
+                    <img
+                        src="${item.imagem}"
+                        alt="${item.titulo}">
+
+                    <h3>
+                        ${item.titulo}
+                    </h3>
+
+                    <p>
+                        Clique para acessar o portal
+                    </p>
+
                 </a>
+
             `;
-    
-        } else if (item.tipo === "Tutorial") {
-    
+
+        }
+
+
+        // =========================
+        // TUTORIAIS
+        // =========================
+
+        else if (item.tipo === "Tutorial") {
+
             container.innerHTML += `
-            <div class="card-tutorial">
-    
-                <a
-                    class="tutorial-link"
-                    href="${item.link}"
-                    target="_blank"
-                >
-    
-                    <div class="video-circle">
-                        <span>▶</span>
+
+                <div class="card-tutorial">
+
+                    <a
+                        class="tutorial-link"
+                        href="${item.link}"
+                        target="_blank"
+                        rel="noopener noreferrer">
+
+                        <div class="video-circle">
+                            <span>▶</span>
+                        </div>
+
+                        <h3>
+                            ${item.titulo}
+                        </h3>
+
+                    </a>
+
+
+                    <div class="status-card">
+
+                        <label>
+                            Status:
+                        </label>
+
+                        <select
+                            onchange="alterarStatus(${item.id}, this)">
+
+                            <option
+                                value=""
+                                ${!item.status ? "selected" : ""}
+                                disabled>
+
+                                Selecione...
+
+                            </option>
+
+                            <option
+                                value="Quero ler"
+                                ${item.status === "Quero ler" ? "selected" : ""}>
+
+                                Quero ler
+
+                            </option>
+
+                            <option
+                                value="Lendo"
+                                ${item.status === "Lendo" ? "selected" : ""}>
+
+                                Lendo
+
+                            </option>
+
+                            <option
+                                value="Lido"
+                                ${item.status === "Lido" ? "selected" : ""}>
+
+                                Lido
+
+                            </option>
+
+                        </select>
+
                     </div>
-    
-                    <h3>${item.titulo}</h3>
-    
-                </a>
-    
-                <div class="status-card">
-    
-                    <label>Status:</label>
-    
-                    <select onchange="alterarStatus(${item.id}, this)">
-    
-                        <option value=""
-                            ${!item.status ? "selected" : ""}
-                            disabled>
-                            Selecione...
-                        </option>
-    
-                        <option value="Quero ler"
-                            ${item.status === "Quero ler" ? "selected" : ""}>
-                            Quero ler
-                        </option>
-    
-                        <option value="Lendo"
-                            ${item.status === "Lendo" ? "selected" : ""}>
-                            Lendo
-                        </option>
-    
-                        <option value="Lido"
-                            ${item.status === "Lido" ? "selected" : ""}>
-                            Lido
-                        </option>
-    
-                    </select>
-    
+
                 </div>
-    
-            </div>
-        `;
-    
-        } else {
-    
-            // ARTIGOS E LIVROS
+
+            `;
+
+        }
+
+
+        // =========================
+        // ARTIGOS E LIVROS
+        // =========================
+
+        else {
+
             container.innerHTML += `
-    
+
                 <div class="card">
-    
-                    ${item.imagem
-                        ? `<img src="${item.imagem}" alt="${item.titulo}">`
-                        : `<div class="sem-imagem">📄</div>`
+
+                    ${
+                        item.imagem
+
+                        ? `
+                            <img
+                                src="${item.imagem}"
+                                alt="${item.titulo}">
+                        `
+
+                        : `
+                            <div class="sem-imagem">
+                                📄
+                            </div>
+                        `
                     }
-    
+
+
                     <div class="card-conteudo">
-    
-                        <h3>${item.titulo}</h3>
-    
-                        <p>${item.descricao}</p>
-    
+
+                        <h3>
+                            ${item.titulo}
+                        </h3>
+
+
+                        <p>
+                            ${item.descricao}
+                        </p>
+
+
                         <div class="tipo">
                             ${item.tipo}
                         </div>
-    
+
+
                         <div class="status-card">
-    
-                            <label>Status:</label>
-    
-                            <select onchange="alterarStatus(${item.id}, this)">
-    
-                                <option value=""
+
+                            <label>
+                                Status:
+                            </label>
+
+                            <select
+                                onchange="alterarStatus(${item.id}, this)">
+
+                                <option
+                                    value=""
                                     ${!item.status ? "selected" : ""}
                                     disabled>
+
                                     Selecione...
+
                                 </option>
-    
-                                <option value="Quero ler"
+
+                                <option
+                                    value="Quero ler"
                                     ${item.status === "Quero ler" ? "selected" : ""}>
+
                                     Quero ler
+
                                 </option>
-    
-                                <option value="Lendo"
+
+                                <option
+                                    value="Lendo"
                                     ${item.status === "Lendo" ? "selected" : ""}>
+
                                     Lendo
+
                                 </option>
-    
-                                <option value="Lido"
+
+                                <option
+                                    value="Lido"
                                     ${item.status === "Lido" ? "selected" : ""}>
+
                                     Lido
+
                                 </option>
-    
+
                             </select>
-    
+
                         </div>
-    
+
+
                         <button
                             class="btn-abrir"
-                            onclick="window.open('${item.arquivo}','_blank')">
-    
+                            onclick="window.open('${item.arquivo}', '_blank')">
+
                             Abrir arquivo
-    
+
                         </button>
-    
+
                     </div>
-    
+
                 </div>
-    
+
             `;
+
         }
-    
+
     });
 
 }
+
+
+// =========================
+// ALTERAR STATUS
+// =========================
 
 function alterarStatus(idLivro, select) {
 
@@ -272,16 +427,54 @@ function alterarStatus(idLivro, select) {
         item => item.id === idLivro
     );
 
+    if (!livro) return;
+
     livro.status = select.value;
 
+
     if (select.value === "Lido") {
+
         select.style.background = "#D8F3DC";
+
     }
+
     else if (select.value === "Lendo") {
+
         select.style.background = "#FFF3BF";
+
     }
+
     else {
+
         select.style.background = "#E9ECEF";
+
     }
 
 }
+
+
+// =========================
+// COPIAR E-MAIL
+// =========================
+
+function copiarEmail() {
+
+    const email =
+        document.getElementById("email").textContent;
+
+    navigator.clipboard.writeText(email)
+
+        .then(() => {
+
+            alert("📋 E-mail copiado!");
+
+        })
+
+        .catch(() => {
+
+            alert("❌ Não foi possível copiar o e-mail.");
+
+        });
+
+}
+
