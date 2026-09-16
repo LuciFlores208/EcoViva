@@ -132,6 +132,9 @@ DESTAQUES
 color: #078C00;
 font-weight: 700;
 }
+.topo .texto-topo .destaque{
+    color: #5de456;
+}
 
 /* =========================
 CARD DO MAPA
