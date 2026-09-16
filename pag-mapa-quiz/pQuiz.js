@@ -234,6 +234,8 @@ botaoProximo.addEventListener("click", ()=>{
 function finalizarQuiz(){
 
     document.querySelector(".quiz-box").innerHTML = `
+ 
+    <button class="botao-voltar" onclick="history.back()">←</button>
 
         <header>
             <h1>🌱 Resultado</h1>
@@ -274,6 +276,8 @@ function reiniciarQuiz(){
 
     document.querySelector(".quiz-box").innerHTML = `
 
+    <button class="botao-voltar" onclick="history.back()">←</button>
+    
         <header>
             <h1>🌱 EcoQuiz</h1>
         </header>
