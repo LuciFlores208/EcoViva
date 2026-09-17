@@ -31,23 +31,17 @@ body {
    HEADER
 ========================= */
 
-.header {
+nav {
     background: #155912;
+    top: 0;
+    left: 0;
     max-width: 100%;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    
+    z-index: 10; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
     padding: 20px 8%;
     height: 60px;
-    font-size: 16px;
-
-    top: 0;
-    z-index: 10;
-
-    box-shadow: 0 1px 4px rgba(0,0,0,.08);
-    left: 0;
 }
 
 /* LOGO */
@@ -65,23 +59,23 @@ body {
 
 /* MENU */
 
-.header nav {
+nav ul{
     display: flex;
     gap: 30px;
+    list-style: none;
+    position: relative;
+    
 }
 
-.header a {
-    text-decoration: none;
-    color: white;
+nav a {
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
     font-family: 'Poppins', sans-serif;
-    font-weight: bold;
-    transition: 0.2s;
-    display:flex;
-    gap:30px;
-    list-style:none;
+    font-size: 16px;
 }
 
-.header a:hover {
+nav :hover {
     color: #9be28f;
 }
 
