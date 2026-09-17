@@ -33,19 +33,21 @@ body{
     background:#f8f8f3;
     
     font-size: 20px;
-
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 
-nav{
-    position: absolute; 
+nav {
+    position: absolute;
     top: 0;
     left: 0;
-    max-width: 100%;
-    z-index: 10; 
-    display: flex; 
-    justify-content: space-between; 
-    align-items: center; 
+    width: 100%;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 20px 8%;
     height: 60px;
 }
@@ -64,8 +66,6 @@ nav ul{
     display: flex;
     gap: 30px;
     list-style: none;
-    position: relative;
-    left: 414px;
 }
 
 nav a{

@@ -24,6 +24,10 @@ button {
 body {
     background: #2F692F;
     font-size: 20px;
+
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 

@@ -24,6 +24,10 @@ button {
 body {
     background: #f8f8f3;
     font-size: 20px;
+
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 
@@ -88,6 +92,8 @@ nav :hover {
     width: 85%;
     max-width: 1200px;
     margin: 40px auto;
+
+    flex: 1;
 }
 
 
