@@ -72,6 +72,36 @@ setInterval(() => {
 }, 4000);
 
 
+/* ABRIR IMAGEM AMPLIADA */
+
+const modal = document.getElementById("modalImagem");
+const imagemAberta = document.getElementById("imagemAberta");
+const fechar = document.getElementById("fechar");
+
+const fotos = [foto1, foto2, foto3];
+
+fotos.forEach(foto => {
+    foto.addEventListener("click", () => {
+        imagemAberta.src = foto.src;
+        imagemAberta.alt = foto.alt;
+
+        modal.classList.add("aberta");
+    });
+});
+
+// Fechar pelo X
+fechar.onclick = () => {
+    modal.classList.remove("aberta");
+};
+
+// Fechar clicando fora da imagem
+modal.onclick = (evento) => {
+    if (evento.target === modal) {
+        modal.classList.remove("aberta");
+    }
+};
+
+
 /* COPIAR E-MAIL */
 
 

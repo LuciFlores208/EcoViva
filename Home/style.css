@@ -52,14 +52,20 @@ nav {
     height: 60px;
 }
 
-.logo{
+.logo {
     width: 120px;
     height: auto;
     display: block;
+    transition: transform 0.25s ease;
 }
 
 .logo img {
     width: 150px;
+    display: block;
+}
+
+.logo:hover {
+    transform: scale(1.10);
 }
 
 nav ul{

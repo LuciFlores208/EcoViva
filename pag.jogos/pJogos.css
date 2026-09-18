@@ -75,8 +75,13 @@ a {
     object-fit: contain;
     display: block;
     flex-shrink: 0;
+    transition: transform 0.2s ease, filter 0.2s ease;
 }
 
+.nav-inner > a:hover .nav-logo {
+    transform: scale(1.08);
+    filter: drop-shadow(4px 4px 0 var(--green-bright));
+}
 /* MENU */
 .nav-links {
     list-style: none;
