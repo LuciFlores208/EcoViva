@@ -102,6 +102,11 @@ a {
     background: rgba(255, 255, 255, 0.06);
 }
 
+nav a.ativo {
+    color: #09c256;
+    font-weight: 800;
+}
+
 /* BOTÃO MOBILE */
 .nav-toggle {
     display: none;

@@ -83,6 +83,11 @@ nav :hover {
     color: #9be28f;
 }
 
+nav a.ativo {
+    color: #09c256;
+    font-weight: 800;
+}
+
 
 /* =========================
    BIBLIOTECA

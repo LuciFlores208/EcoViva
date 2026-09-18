@@ -80,6 +80,11 @@ nav a:hover{
     color: #9be28f;
 }
 
+nav a.ativo {
+    color: #09c256;
+    font-weight: 800;
+}
+
 .home-hero{
     position:relative;
     height:70vh;

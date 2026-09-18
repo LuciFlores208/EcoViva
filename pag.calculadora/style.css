@@ -83,8 +83,10 @@ nav :hover {
     color: #078C00;
 }
 
-
-
+nav a.ativo {
+    color: #09c256;
+    font-weight: 800;
+}
 
 .card {
     max-width: 720px;

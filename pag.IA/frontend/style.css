@@ -86,6 +86,10 @@ nav :hover {
     color: #9be28f;
 }
 
+nav a.ativo {
+    color: #09c256;
+    font-weight: 800;
+}
 /* =========================
    LAYOUT
 ========================= */
@@ -103,7 +107,7 @@ aside {
     width: 290px;
     flex-shrink: 0;
 
-    background: #234f27;
+    background: #155912;
     color: white;
 
     padding: 30px 27px;
@@ -211,7 +215,7 @@ section h1 span {
     border: 0;
     border-radius: 50%;
 
-    background: #234f27;
+    background: #155912;
     color: white;
 
     position: absolute;
