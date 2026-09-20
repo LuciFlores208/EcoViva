@@ -215,6 +215,7 @@ nav a.ativo {
 .desafios p{
     line-height:1.8;
     text-align:justify;
+    margin-bottom: 25px;
 }
 footer {
     margin-top: 0;
