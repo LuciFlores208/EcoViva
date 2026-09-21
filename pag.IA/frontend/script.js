@@ -14,7 +14,7 @@ async function enviarPergunta() {
     btnEnviar.disabled = true;
 
     areaResposta.innerHTML =
-        '<span class="loading">🦫 Capy está pensando...</span>';
+        '<span class="loading">Capy está pensando...</span>';
 
     try {
         const response = await fetch('http://localhost:3000/api/chat', {
