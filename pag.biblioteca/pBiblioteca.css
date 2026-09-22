@@ -24,7 +24,7 @@ button {
 body {
     background: #f8f8f3;
     font-size: 20px;
-
+    
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -34,65 +34,68 @@ body {
 /* =========================
    HEADER
 ========================= */
-
-nav {
-    background: #155912;
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    
+    }
+    
+    nav {
     top: 0;
     left: 0;
     max-width: 100%;
-    z-index: 10; 
-    display: flex; 
-    justify-content: space-between; 
-    align-items: center; 
+    height: 60px; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #155912;
     padding: 20px 8%;
-    height: 60px;
-}
-
-/* LOGO */
-
-.logo {
-    width: 120px;
-    height: auto;
-    display: block;
-    transition: transform 0.25s ease;
-}
-
-.logo img {
-    width: 150px;
-    display: block;
-}
-
-.logo:hover {
-    transform: scale(1.10);
-}
-
-
-/* MENU */
-
-nav ul{
+    z-index: 10; 
+    }
+    
+    .logo {
+        width: 120px;
+        height: auto;
+        display: block;
+        transition: transform 0.25s ease;
+    }
+    
+    .logo img {
+        width: 150px;
+        display: block;
+    }
+    
+    .logo:hover {
+        transform: scale(1.10);
+    }
+    
+    nav ul {
     display: flex;
     gap: 30px;
     list-style: none;
-    position: relative;
+    }
     
-}
-
-nav a {
-    color:white;
-    text-decoration:none;
-    font-weight:bold;
+    nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.2s;
     font-family: 'Poppins', sans-serif;
     font-size: 16px;
-}
-
-nav :hover {
+    }
+    
+    nav a:hover {
     color: #9be28f;
-}
-
-nav a.ativo {
-    color: #09c256;
-    font-weight: 800;
-}
+    }
+    
+    nav a.ativo {
+        color: #09c256;
+        font-weight: 800;
+    }
+    
 
 
 /* =========================
@@ -102,7 +105,7 @@ nav a.ativo {
 .biblioteca {
     width: 85%;
     max-width: 1200px;
-    margin: 40px auto;
+    margin: 100px auto 30px;
 
     flex: 1;
 }
@@ -127,7 +130,7 @@ nav a.ativo {
     text-align: center;
 
     padding: 40px;
-    margin-bottom: 20px;
+    margin-bottom: 20px; 
 }
 
 .texto-topo p {

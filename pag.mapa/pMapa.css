@@ -39,7 +39,7 @@ HEADER
 ========================= */
 
 header {
-position: absolute;
+position: fixed;
 top: 0;
 left: 0;
 width: 100%;
@@ -55,7 +55,7 @@ height: 60px;
 display: flex;
 justify-content: space-between;
 align-items: center;
-
+background-color: #155912;
 padding: 20px 8%;
 z-index: 10; 
 }
