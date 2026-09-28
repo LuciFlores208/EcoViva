@@ -23,6 +23,19 @@ Promise.all([
         ...tutoriaisDados
     ];
 
+    const statusSalvos = JSON.parse(
+        localStorage.getItem("bibliotecaStatus") || "{}"
+    );
+    
+    biblioteca.forEach(item => {
+        const statusSalvo =
+            statusSalvos[`${item.tipo}_${item.id}`];
+    
+        if (statusSalvo) {
+            item.status = statusSalvo;
+        }
+    });
+
     renderizarCards();
 
 })
@@ -431,25 +444,26 @@ function alterarStatus(idLivro, select) {
 
     livro.status = select.value;
 
+    // Recupera os status que já estavam salvos
+    const statusSalvos = JSON.parse(
+        localStorage.getItem("bibliotecaStatus") || "{}"
+    );
+
+    // Salva o novo status
+    statusSalvos[`${livro.tipo}_${livro.id}`] = select.value;
+
+    localStorage.setItem(
+        "bibliotecaStatus",
+        JSON.stringify(statusSalvos)
+    );
 
     if (select.value === "Lido") {
-
         select.style.background = "#D8F3DC";
-
-    }
-
-    else if (select.value === "Lendo") {
-
+    } else if (select.value === "Lendo") {
         select.style.background = "#FFF3BF";
-
-    }
-
-    else {
-
+    } else {
         select.style.background = "#E9ECEF";
-
     }
-
 }
 
 
