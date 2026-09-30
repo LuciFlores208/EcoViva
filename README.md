@@ -48,7 +48,6 @@ O **EcoViva** foi criado com o objetivo de contribuir para esse processo, utiliz
 ## 🛠️ Ferramentas Utilizadas
 
 - **Linguagens:** HTML, CSS e JavaScript;
-- **Bibliotecas:** Three.js;
 - **Mapas:** Google Maps;
 - **Formato de dados:** JSON;
 - **Versionamento:** Git e GitHub.
