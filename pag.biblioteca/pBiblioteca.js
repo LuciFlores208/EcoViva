@@ -1,4 +1,3 @@
-
 let biblioteca = [];
 
 let tipoSelecionado = "Todos";
@@ -271,42 +270,11 @@ function renderizarCards() {
                             Status:
                         </label>
 
-                        <select
-                            onchange="alterarStatus(${item.id}, this)">
-
-                            <option
-                                value=""
-                                ${!item.status ? "selected" : ""}
-                                disabled>
-
-                                Selecione...
-
-                            </option>
-
-                            <option
-                                value="Quero ler"
-                                ${item.status === "Quero ler" ? "selected" : ""}>
-
-                                Quero ler
-
-                            </option>
-
-                            <option
-                                value="Lendo"
-                                ${item.status === "Lendo" ? "selected" : ""}>
-
-                                Lendo
-
-                            </option>
-
-                            <option
-                                value="Lido"
-                                ${item.status === "Lido" ? "selected" : ""}>
-
-                                Lido
-
-                            </option>
-
+                        <select onchange="alterarStatus(${item.id}, this)"> 
+                        <option value="" ${!item.status ? "selected" : ""}> Selecione... </option> 
+                        <option value="Quero ler" ${item.status === "Quero ler" ? "selected" : ""}> Quero ler </option> 
+                        <option value="Lendo" ${item.status === "Lendo" ? "selected" : ""}> Lendo </option> 
+                        <option value="Lido" ${item.status === "Lido" ? "selected" : ""}> Lido </option> 
                         </select>
 
                     </div>
@@ -368,42 +336,11 @@ function renderizarCards() {
                                 Status:
                             </label>
 
-                            <select
-                                onchange="alterarStatus(${item.id}, this)">
-
-                                <option
-                                    value=""
-                                    ${!item.status ? "selected" : ""}
-                                    disabled>
-
-                                    Selecione...
-
-                                </option>
-
-                                <option
-                                    value="Quero ler"
-                                    ${item.status === "Quero ler" ? "selected" : ""}>
-
-                                    Quero ler
-
-                                </option>
-
-                                <option
-                                    value="Lendo"
-                                    ${item.status === "Lendo" ? "selected" : ""}>
-
-                                    Lendo
-
-                                </option>
-
-                                <option
-                                    value="Lido"
-                                    ${item.status === "Lido" ? "selected" : ""}>
-
-                                    Lido
-
-                                </option>
-
+                            <select onchange="alterarStatus(${item.id}, this)"> 
+                            <option value="" ${!item.status ? "selected" : ""}> Selecione... </option> 
+                            <option value="Quero ler" ${item.status === "Quero ler" ? "selected" : ""}> Quero ler </option> 
+                            <option value="Lendo" ${item.status === "Lendo" ? "selected" : ""}> Lendo </option> 
+                            <option value="Lido" ${item.status === "Lido" ? "selected" : ""}> Lido </option> 
                             </select>
 
                         </div>
@@ -442,26 +379,66 @@ function alterarStatus(idLivro, select) {
 
     if (!livro) return;
 
-    livro.status = select.value;
-
-    // Recupera os status que já estavam salvos
+    // Recupera os status salvos
     const statusSalvos = JSON.parse(
         localStorage.getItem("bibliotecaStatus") || "{}"
     );
 
-    // Salva o novo status
-    statusSalvos[`${livro.tipo}_${livro.id}`] = select.value;
+    const chave = `${livro.tipo}_${livro.id}`;
+
+    // =========================
+    // REMOVER STATUS
+    // =========================
+
+    if (select.value === "") {
+
+        // Remove o status do item
+        delete livro.status;
+
+        // Remove o status do localStorage
+        delete statusSalvos[chave];
+
+        localStorage.setItem(
+            "bibliotecaStatus",
+            JSON.stringify(statusSalvos)
+        );
+
+        // Volta para "Selecione..."
+        select.value = "";
+
+        // Volta a aparência normal
+        select.style.background = "#E9ECEF";
+
+        return;
+    }
+
+    // =========================
+    // SALVAR STATUS
+    // =========================
+
+    livro.status = select.value;
+
+    statusSalvos[chave] = select.value;
 
     localStorage.setItem(
         "bibliotecaStatus",
         JSON.stringify(statusSalvos)
     );
 
+    // =========================
+    // CORES
+    // =========================
+
     if (select.value === "Lido") {
+
         select.style.background = "#D8F3DC";
+
     } else if (select.value === "Lendo") {
+
         select.style.background = "#FFF3BF";
-    } else {
+
+    } else if (select.value === "Quero ler") {
+
         select.style.background = "#E9ECEF";
     }
 }
