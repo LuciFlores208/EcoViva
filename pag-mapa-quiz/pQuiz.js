@@ -93,7 +93,7 @@ const perguntas = [
             "17 objetivos para construir novas indústrias de petróleo.",
             "25 objetivos para tirar notas melhores na escola."
         ],
-        correta: 1,
+        correta: 0,
         explicacao:"Os Objetivos de Desenvolvimento Sustentável (ODS) são 17 metas que os países do mundo criaram para fazer do planeta um lugar melhor até 2030. Eles querem acabar com a pobreza, garantir que todas as crianças possam ir à escola, cuidar da saúde de todos e proteger a natureza. Por exemplo, um dos objetivos é ter água limpa para beber e outro é garantir que meninos e meninas sejam tratados de forma igual. Esses objetivos ajudam as pessoas a trabalharem juntas para que todos tenham uma vida boa e feliz!"
     },
 
