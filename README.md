@@ -84,6 +84,21 @@ O **EcoViva** busca incentivar novas atitudes, estimular a consciência ambienta
 [▶️ Clique aqui para assistir ao vídeo](./Eco1/Eco1.mp4)
 
 
-
 ## 🙌 Projeto Final
+![Final 1](./Eco1/fhome.jpeg)
 
+![Final 2](./Eco1/fmapa.jpeg)
+
+![Final 3](./Eco1/fquiz.jpeg)
+
+![Final 4](./Eco1/fbiblioteca.jpeg)
+
+![Final 5](./Eco1/fcalculadora.jpeg)
+
+![Final 6](./Eco1/fjogos.jpeg)
+
+![Final 7](./Eco1/fcapy.jpeg)
+
+## 🎥 Demonstração
+
+[▶️ Clique aqui para assistir ao vídeo](./Eco1/Eco.mp4)
